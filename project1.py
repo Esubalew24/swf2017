@@ -6,7 +6,8 @@ from kivy.uix.button import Label
 
 class HelloKivy(App):
     def build(self):
-        return Label(text="Hello  all Amigo  Kivy")
+        return Label(text="Welcome to University of Oulu")
+        return Label(text="Play a tour game to University of Oulu")
 helloKivy = HelloKivy()
 
 helloKivy.run()
