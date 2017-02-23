@@ -1,0 +1,3 @@
+title=Oulu University Game
+author=Esubalew
+orientation=landscape
