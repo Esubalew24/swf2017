@@ -80,7 +80,7 @@ Builder.load_string('''
 
 
 class Game(ScreenManager):
-    '''Main widget for menu and game screens.'''
+    '''Main widget for menu and game screens. If Possible remove the matrix option.'''
 
     def __init__(self, **kw):
         '''__init__() here is used mostly to let other classes access
