@@ -1,7 +1,7 @@
 from kivy.app import App
 from kivy.garden.mapview import MapView
 
-
+# fola test
 # this is the map
 class MapViewApp(App):
     def build(self):
