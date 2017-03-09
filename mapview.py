@@ -1,11 +1,9 @@
-from kivy.app import App
 from kivy.garden.mapview import MapView
+from kivy.app import App
 
-# fola test
-# this is the map
 class MapViewApp(App):
     def build(self):
-        mapview = MapView(zoom=11, lat=50.6394, lon=3.057)
+        mapview = MapView(zoom=17, lat=65.0593, lon=25.4663)
         return mapview
 
 MapViewApp().run()
