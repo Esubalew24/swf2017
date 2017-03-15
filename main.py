@@ -7,7 +7,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import Screen, ScreenManager
-
+from minigame1.main import Pairs
 Builder.load_string('''
 <map>:
     MapView:
@@ -16,11 +16,15 @@ Builder.load_string('''
         lon: 25.4663
     Button:
         text: 'Click to play game'
-        size: 10, 10
-        pos: 100, 100
+        size: 150, 150
+        pos: 400, 400
 ''')
 
-class map(Screen):
+#class game(App):
+#    def build(self):
+#        return Pairs()
+
+class map(Widget):
     def build(self):
         map = MapView()
         button = Button()
@@ -28,7 +32,6 @@ class map(Screen):
 
 class main(App):
     def build(self):
-        main = map()
-        return main
+        return map()
 
 main().run()
