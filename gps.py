@@ -3,7 +3,7 @@ from plyer import gps
 from kivy.app import App
 from kivy.properties import StringProperty
 from kivy.clock import Clock, mainthread
-from kivy.garden.mapview import MapMarker
+from kivy.garden.mapview import Mapview, MapMarker
 
 kv = '''
 BoxLayout:
