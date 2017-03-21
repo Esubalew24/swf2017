@@ -21,26 +21,13 @@ Builder.load_string('''
         BoxLayout:
             Label:
                 id: cols
-                text: '2'
+                text: '4'
             Label:
                 text: 'x'
             Label:
                 id: rows
-                text: '2'
-            BoxLayout:
-                orientation: 'vertical'
-                Button:
-                    text: 'up'
-                    on_release: root.ids.cols.text = \
-                                    str(int(root.ids.cols.text)+2)
-                    on_release: root.ids.rows.text = \
-                                    str(int(root.ids.rows.text)+2)
-                Button:
-                    text: 'down'
-                    on_release: root.ids.rows.text = \
-                                    str(int(root.ids.rows.text)-2)
-                    on_release: root.ids.cols.text = \
-                                    str(int(root.ids.cols.text)-2)
+                text: '4'
+
         Button:
             text: 'Play'
             on_release: root.manager.current = 'play'
@@ -80,7 +67,7 @@ Builder.load_string('''
 
 
 class Game(ScreenManager):
-    '''Main widget for menu and game screens. If Possible remove the matrix option.'''
+    '''Main widget for menu and game screens.'''
 
     def __init__(self, **kw):
         '''__init__() here is used mostly to let other classes access
