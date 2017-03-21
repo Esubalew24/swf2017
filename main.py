@@ -1,11 +1,18 @@
 from kivy.app import App
 from kivy.base import runTouchApp
 from kivy.lang import Builder
+from kivy.uix.popup import Popup
+from kivy.uix.spinner import Spinner
+from kivy.uix.widget import Widget
+from kivy.graphics import Line
 from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
+
+class CustomPopup(Popup):
+    pass
 
 class Wellcome(Screen):
     pass
@@ -14,7 +21,14 @@ class SecondScreen(Screen):
     pass
 
 class MapScreen(Screen):
-   pass
+
+    def open_popup(self):
+        the_popup = CustomPopup()
+        the_popup.open()
+
+     #def fn(self, value):
+     #   execfile("hello.py")
+
 
 
 
@@ -59,6 +73,7 @@ MyScreenManager:
     name: 'second'
     BoxLayout:
         orientation: 'vertical'
+
         Image:
             source: 'welcome.png'
             allow_stretch: True
@@ -93,6 +108,15 @@ MyScreenManager:
                 font_size: 30
                 on_release: app.root.current = 'forth'
 
+            Button:
+                text: "Open Popup"
+                on_press: root.open_popup()
+
+            Button:
+                text: "Open second Popup"
+                on_press: root.open_popup()
+
+
 <CongratulationScreen>:
     name: 'forth'
     BoxLayout:
@@ -112,6 +136,16 @@ MyScreenManager:
                 text: 'Go to the second page'
                 font_size: 30
                 on_release: app.root.current = 'second'
+
+
+<CustomPopup>:
+    size_hint: .75, .75
+    auto_dismiss: False
+    title: "Minigame 1"
+    Button:
+        text: "Close"
+        on_press: root.dismiss()
+
 
 ''')
 
