@@ -112,7 +112,6 @@ MyScreenManager:
                 font_size: 30
                 on_release: app.root.current = 'second'
 
-
 ''')
 
 class ScreenManagerApp(App):
