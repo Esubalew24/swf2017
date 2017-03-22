@@ -4,7 +4,7 @@ from kivy.uix.popup import Popup
 import multiprocessing
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
-from test import MainApp
+from play import DrawInput
 
 class CustomPopup(Popup):
     pass
@@ -16,10 +16,10 @@ class SecondScreen(Screen):
     pass
 
 class MapScreen(Screen):
-    def launchMainApp(self):
-        app = MainApp()
-        p = multiprocessing.Process(target=app.run)
-        p.start()
+    pass
+
+class Game(Screen):
+    pass
 
 class CongratulationScreen(Screen):
     pass
@@ -35,6 +35,7 @@ MyScreenManager:
     Welcome:
     SecondScreen:
     MapScreen:
+    Game:
     CongratulationScreen:
 
 <Welcome>:
@@ -93,7 +94,16 @@ MyScreenManager:
             Button:
                 text: 'Launch Mini Game 1'
                 font_size: 30
-                on_release: root.launchMainApp()
+                on_release: app.root.current = 'game'
+<Game>:
+    name:'game'
+    BoxLayout:
+        orientation: 'vertical'
+        DrawInput:
+        Button:
+            text: 'Go to Map Screen'
+            font_size: 30
+            on_release: app.root.current = 'third'
 ''')
 
 class ScreenManagerApp(App):
