@@ -201,7 +201,7 @@ class Item(ButtonBehavior, Image):
             return (1, 1, int(self.pair/255.0)+0.02, 1)
 
 
-class Pairs(App):
+class game1(App):
     '''Main class connecting other classes.'''
 
     selected = -1
@@ -215,4 +215,4 @@ class Pairs(App):
         return Game()
 
 if __name__ == '__main__':
-    Pairs().run()
+   game1().run()
