@@ -78,13 +78,33 @@ MyScreenManager:
             lat: 65.0593
             lon: 25.4663
             MapMarker:
+                title: "Restaurant"
                 lat: 65.0600012
                 lon: 25.4645286
                 on_release: app.root.current = 'game'
+
+            MapMarker:
+                title: "Somewhere"
+                lat: 65.0593177
+                lon: 25.466293500000006
+                on_release: app.root.current = 'game'
+
+            MapMarker:
+                title: "Ravintola Stories"
+                lat: 65.05820786309047
+                lon: 25.466705560684204
+                on_release: app.root.current = 'game'
+
+            MapMarker:
+                title: "Oulun Yliopisto Kauppakorkeakoulu"
+                lat: 65.06031611340609
+                lon: 25.468658208847046
+                on_release: app.root.current = 'game'
+
         BoxLayout:
             size_hint: 1, None
             Button:
-                text: 'Launch Mini Game 1'
+                text: 'Play Games'
                 font_size: 30
                 on_release: app.root.current = 'game'
 <Game>:
