@@ -14,7 +14,7 @@ from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
-from minigame1.play import game1
+from test import MainApp
 
 class CustomPopup(Popup):
     pass
@@ -26,8 +26,8 @@ class SecondScreen(Screen):
     pass
 
 class MapScreen(Screen):
-    def launchMinigame1(self):
-        app =game1()
+    def launchMainApp(self):
+        app = MainApp()
         p = multiprocessing.Process(target=app.run)
         p.start()
 
@@ -103,7 +103,7 @@ MyScreenManager:
             Button:
                 text: 'Launch Mini Game 1'
                 font_size: 30
-                on_release: root.launchMinigame1()
+                on_release: root.launchMainApp()
 ''')
 
 class ScreenManagerApp(App):
