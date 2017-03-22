@@ -1,17 +1,7 @@
 from kivy.app import App
-from kivy.base import runTouchApp
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
-from kivy.uix.button import Button
-from minigame1.play import game1
 import multiprocessing
-from kivy.uix.button import ButtonBehavior
-from kivy.uix.image import Image
-from kivy.uix.spinner import Spinner
-from kivy.uix.widget import Widget
-from kivy.graphics import Line
-from kivy.properties import ListProperty
-from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from test import MainApp
