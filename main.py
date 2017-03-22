@@ -2,6 +2,11 @@ from kivy.app import App
 from kivy.base import runTouchApp
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
+from kivy.uix.button import Button
+from minigame1.play import game1
+import multiprocessing
+from kivy.uix.button import ButtonBehavior
+from kivy.uix.image import Image
 from kivy.uix.spinner import Spinner
 from kivy.uix.widget import Widget
 from kivy.graphics import Line
@@ -9,7 +14,7 @@ from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
-
+from minigame1.play import game1
 
 class CustomPopup(Popup):
     pass
@@ -21,21 +26,13 @@ class SecondScreen(Screen):
     pass
 
 class MapScreen(Screen):
-
-    def open_popup(self):
-        the_popup = CustomPopup()
-        the_popup.open()
-
-     #def fn(self, value):
-     #   execfile("hello.py")
-
-
-
-
+    def launchMinigame1(self):
+        app =game1()
+        p = multiprocessing.Process(target=app.run)
+        p.start()
 
 class CongratulationScreen(Screen):
     pass
-
 
 class MyScreenManager(ScreenManager):
     pass
@@ -65,7 +62,7 @@ MyScreenManager:
                 font_size: 30
                 on_release: app.root.current = 'second'
             Button:
-                text: 'Go to third page'
+                text: 'Go to Map Screen'
                 font_size: 30
                 on_release: app.root.current = 'third'
 
@@ -85,7 +82,7 @@ MyScreenManager:
                 font_size: 30
                 on_release: app.root.current = 'wellcome'
             Button:
-                text: 'go to third page'
+                text: 'go to Map Screen'
                 font_size: 30
                 on_release: app.root.current = 'third'
 
@@ -104,49 +101,9 @@ MyScreenManager:
                 font_size: 30
                 on_release: app.root.current = 'wellcome'
             Button:
-                text: 'Go to the forth page'
+                text: 'Launch Mini Game 1'
                 font_size: 30
-                on_release: app.root.current = 'forth'
-
-            Button:
-                text: "Open Popup"
-                on_press: root.open_popup()
-
-            Button:
-                text: "Open second Popup"
-                on_press: root.open_popup()
-
-
-<CongratulationScreen>:
-    name: 'forth'
-    BoxLayout:
-        orientation: 'vertical'
-
-        Image:
-            source: 'congratulation.png'
-            allow_stretch: True
-            keep_ratio: False
-        BoxLayout:
-            size_hint: 1, None
-            Button:
-                text: 'goto welcome screen'
-                font_size: 30
-                on_release: app.root.current = 'wellcome'
-            Button:
-                text: 'Go to the second page'
-                font_size: 30
-                on_release: app.root.current = 'second'
-
-
-<CustomPopup>:
-    size_hint: .75, .75
-    auto_dismiss: False
-    title: "Minigame 1"
-    Button:
-        text: "Close"
-        on_press: root.dismiss()
-
-
+                on_release: root.launchMinigame1()
 ''')
 
 class ScreenManagerApp(App):
