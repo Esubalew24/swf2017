@@ -11,8 +11,3 @@ class DrawInput(Widget):
         touch.ud["line"].points += (touch.x, touch.y)
     def on_touch_up(self, touch):
         print("RELEASED!",touch)
-class drawing(App):
-    def build(self):
-        return DrawInput()
-if __name__=="__main__":
-    drawing().run()
