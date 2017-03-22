@@ -77,6 +77,10 @@ MyScreenManager:
             zoom: 17
             lat: 65.0593
             lon: 25.4663
+            MapMarker:
+                lat: 65.0600012
+                lon: 25.4645286
+                on_release: app.root.current = 'game'
         BoxLayout:
             size_hint: 1, None
             Button:
