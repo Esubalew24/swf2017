@@ -40,32 +40,36 @@ MyScreenManager:
 
 <Welcome>:
     name: 'welcome'
-    BoxLayout:
+    FloatLayout:
         orientation: 'vertical'
         Image:
             source: 'logo.png'
             allow_stretch: True
             keep_ratio: False
-        BoxLayout:
+        FloatLayout:
             size_hint: 1, None
             Button:
                 text: 'Next'
+                size_hint: 0.3, 0.6
+                pos_hint: {'x': 0.35, 'y': 0.2}
                 font_size: 30
                 on_release: app.root.current = 'second'
 
 <SecondScreen>:
     name: 'second'
-    BoxLayout:
+    FloatLayout:
         orientation: 'vertical'
 
         Image:
             source: 'welcome.png'
             allow_stretch: True
             keep_ratio: False
-        BoxLayout:
+        FloatLayout:
             size_hint: 1, None
             Button:
                 text: 'Go to Map Screen'
+                size_hint: 0.3, 0.6
+                pos_hint: {'x': 0.35, 'y': 0.2}
                 font_size: 30
                 on_release: app.root.current = 'third'
 
