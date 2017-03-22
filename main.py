@@ -49,13 +49,9 @@ MyScreenManager:
         BoxLayout:
             size_hint: 1, None
             Button:
-                text: 'Go to second screen'
+                text: 'Next'
                 font_size: 30
                 on_release: app.root.current = 'second'
-            Button:
-                text: 'Go to Map Screen'
-                font_size: 30
-                on_release: app.root.current = 'third'
 
 <SecondScreen>:
     name: 'second'
@@ -68,10 +64,6 @@ MyScreenManager:
             keep_ratio: False
         BoxLayout:
             size_hint: 1, None
-            Button:
-                text: 'Go to first screen'
-                font_size: 30
-                on_release: app.root.current = 'welcome'
             Button:
                 text: 'Go to Map Screen'
                 font_size: 30
@@ -88,10 +80,6 @@ MyScreenManager:
         BoxLayout:
             size_hint: 1, None
             Button:
-                text: 'Go to first screen'
-                font_size: 30
-                on_release: app.root.current = 'welcome'
-            Button:
                 text: 'Launch Mini Game 1'
                 font_size: 30
                 on_release: app.root.current = 'game'
@@ -101,7 +89,8 @@ MyScreenManager:
         orientation: 'vertical'
         DrawInput:
         Button:
-            text: 'Go to Map Screen'
+            text: 'Back'
+            size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
 ''')
