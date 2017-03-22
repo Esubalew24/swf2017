@@ -9,7 +9,7 @@ from test import MainApp
 class CustomPopup(Popup):
     pass
 
-class Wellcome(Screen):
+class Welcome(Screen):
     pass
 
 class SecondScreen(Screen):
@@ -32,13 +32,13 @@ root_widget = Builder.load_string('''
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
 MyScreenManager:
     transition: FadeTransition()
-    Wellcome:
+    Welcome:
     SecondScreen:
     MapScreen:
     CongratulationScreen:
 
-<Wellcome>:
-    name: 'wellcome'
+<Welcome>:
+    name: 'welcome'
     BoxLayout:
         orientation: 'vertical'
         Image:
@@ -48,7 +48,7 @@ MyScreenManager:
         BoxLayout:
             size_hint: 1, None
             Button:
-                text: 'goto second screen'
+                text: 'Go to second screen'
                 font_size: 30
                 on_release: app.root.current = 'second'
             Button:
@@ -70,9 +70,9 @@ MyScreenManager:
             Button:
                 text: 'Go to first screen'
                 font_size: 30
-                on_release: app.root.current = 'wellcome'
+                on_release: app.root.current = 'welcome'
             Button:
-                text: 'go to Map Screen'
+                text: 'Go to Map Screen'
                 font_size: 30
                 on_release: app.root.current = 'third'
 
@@ -87,9 +87,9 @@ MyScreenManager:
         BoxLayout:
             size_hint: 1, None
             Button:
-                text: 'goto first screen'
+                text: 'Go to first screen'
                 font_size: 30
-                on_release: app.root.current = 'wellcome'
+                on_release: app.root.current = 'welcome'
             Button:
                 text: 'Launch Mini Game 1'
                 font_size: 30
