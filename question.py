@@ -30,7 +30,7 @@ Builder.load_string('''
     padding: 10
     spacing: 10
 
-
+    # ---------- Holds CheckBox and RadioBox ----------
     BoxLayout:
         orientation: "vertical"
         height: 30
@@ -45,63 +45,51 @@ Builder.load_string('''
                 on_active: root.checkbox_18_clicked(self, self.active)
                 size_hint_x: .20
         BoxLayout:
-            orientation: "vertical"
+            orientation: "horizontal"
             size_hint_x: .55
             CustLabel:
-                text: "Favorite Color"
-                color: 1, 1, 1, 1
+                text: " Favorite Color?"
+                color: 0, 0, 0, 1
                 size_hint_x: .265
             CheckBox:
                 group: "fav_color"
                 value: root.blue
                 size_hint_x: .05
             CustLabel:
-                text: "Blue"
-                color: 1, 1, 1, 1
+                text: " Blue"
+                color: 0, 0, 0, 1
                 size_hint_x: .15
             CheckBox:
                 group: "fav_color"
                 value: root.red
                 size_hint_x: .05
             CustLabel:
-                text: "Red"
-                color: 1, 1, 1, 1
+                text: " Red"
+                color: 0, 0, 0, 1
                 size_hint_x: .15
             CheckBox:
                 group: "fav_color"
                 value: root.green
                 size_hint_x: .05
             CustLabel:
-                text: "Green"
-                color: 1, 1, 1, 1
+                text: " Green"
+                color: 0, 0, 0, 1
                 size_hint_x: .15
 
+    # ---------- Holds Slider & Switch ----------
     BoxLayout:
         orientation: "horizontal"
         height: 30
 
 
 
-
-    # ---------- Displays Popup ----------
-    BoxLayout:
-        orientation: "horizontal"
-        height: 30
-
-        BoxLayout:
-            orientation: "horizontal"
-            size_hint: 1, None
-
-            # When clicked the popup opens
-            Button:
-                text: "Open Popup"
-                on_press: root.open_popup()
 
      ''')
 
+
 # Used to display popup
-class ResultPopup(Popup):
-    pass
+#class ResultPopup(Popup):
+ #   pass
 
 
 class QuestionAnswer(BoxLayout):
@@ -120,6 +108,10 @@ class QuestionAnswer(BoxLayout):
     green = ObjectProperty(False)
 
     # Opens Popup when called
-    def open_popup(self):
-        the_popup = ResultPopup()
-        the_popup.open()
+   # def open_popup(self):
+    #    the_popup = ResultPopup()
+     #   the_popup.open()
+
+    Window.clearcolor = (0, 0.5, 0.5, 0.5)
+
+

@@ -81,7 +81,7 @@ MyScreenManager:
         FloatLayout:
             size_hint: 1, None
             Button:
-                text: 'Go to Map Screen'
+                text: 'Map'
                 size_hint: 0.3, 0.6
                 pos_hint: {'x': 0.35, 'y': 0.2}
                 font_size: 30
@@ -99,13 +99,13 @@ MyScreenManager:
                 title: "Restaurant"
                 lat: 65.0600012
                 lon: 25.4645286
-                on_release: app.root.current = 'game'
+                on_release: app.root.current = 'minigame3'
 
             MapMarker:
                 title: "Somewhere"
                 lat: 65.0593177
                 lon: 25.466293500000006
-                on_release: app.root.current = 'game'
+                on_release: app.root.current = 'question'
 
             MapMarker:
                 title: "Ravintola Stories"
