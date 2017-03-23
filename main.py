@@ -6,6 +6,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from play import DrawInput
 from question import QuestionAnswer
 from minigame3.main import TicTacToe
+from drawing import Painter
 
 class CustomPopup(Popup):
     pass
@@ -28,6 +29,9 @@ class Question(Screen):
 class Minigame3(Screen):
     pass
 
+class Drawing(Screen):
+    pass
+
 class CongratulationScreen(Screen):
     pass
 
@@ -45,6 +49,7 @@ MyScreenManager:
     Game:
     Question:
     Minigame3:
+    Drawing:
     CongratulationScreen:
 
 <Welcome>:
@@ -106,7 +111,7 @@ MyScreenManager:
                 title: "Ravintola Stories"
                 lat: 65.05820786309047
                 lon: 25.466705560684204
-                on_release: app.root.current = 'game'
+                on_release: app.root.current = 'drawing'
 
             MapMarker:
                 title: "Oulun Yliopisto Kauppakorkeakoulu"
@@ -159,6 +164,20 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
+<Drawing>:
+    name: 'drawing'
+    BoxLayout:
+        orientation: 'vertical'
+        Painter:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
+
 ''')
 
 class ScreenManagerApp(App):
