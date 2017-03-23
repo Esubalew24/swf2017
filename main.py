@@ -28,7 +28,6 @@ class Question(Screen):
 class CongratulationScreen(Screen):
     pass
 
-
 class MyScreenManager(ScreenManager):
     pass
 
@@ -41,8 +40,8 @@ MyScreenManager:
     SecondScreen:
     MapScreen:
     Game:
+    Question
     CongratulationScreen:
-    Question:
 
 <Welcome>:
     name: 'welcome'
@@ -116,7 +115,7 @@ MyScreenManager:
             Button:
                 text: 'Play Games'
                 font_size: 30
-                on_release: app.root.current = 'QuestionAnswer'
+                on_release: app.root.current = 'question'
 <Game>:
     name:'game'
     BoxLayout:
@@ -135,6 +134,9 @@ MyScreenManager:
     BoxLayout:
         orientation: 'vertical'
         QuestionAnswer:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
         Button:
             text: 'Back'
             size_hint: 1, None
