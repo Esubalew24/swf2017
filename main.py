@@ -1,11 +1,11 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
-import multiprocessing
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from play import DrawInput
 from question import QuestionAnswer
+from minigame3.main import TicTacToe
 
 class CustomPopup(Popup):
     pass
@@ -25,6 +25,9 @@ class Game(Screen):
 class Question(Screen):
     pass
 
+class Minigame3(Screen):
+    pass
+
 class CongratulationScreen(Screen):
     pass
 
@@ -40,7 +43,8 @@ MyScreenManager:
     SecondScreen:
     MapScreen:
     Game:
-    Question
+    Question:
+    Minigame3:
     CongratulationScreen:
 
 <Welcome>:
@@ -108,7 +112,7 @@ MyScreenManager:
                 title: "Oulun Yliopisto Kauppakorkeakoulu"
                 lat: 65.06031611340609
                 lon: 25.468658208847046
-                on_release: app.root.current = 'game'
+                on_release: app.root.current = 'minigame3'
 
         BoxLayout:
             size_hint: 1, None
@@ -130,7 +134,7 @@ MyScreenManager:
             font_size: 30
             on_release: app.root.current = 'third'
 <Question>:
-    name: "question"
+    name: 'question'
     BoxLayout:
         orientation: 'vertical'
         QuestionAnswer:
@@ -142,12 +146,19 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
-
-
-
-
-
-
+<Minigame3>:
+    name: 'minigame3'
+    BoxLayout:
+        orientation: 'vertical'
+        TicTacToe:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
 ''')
 
 class ScreenManagerApp(App):
