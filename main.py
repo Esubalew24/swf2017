@@ -5,6 +5,7 @@ import multiprocessing
 from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from play import DrawInput
+from question import QuestionAnswer
 
 class CustomPopup(Popup):
     pass
@@ -21,8 +22,12 @@ class MapScreen(Screen):
 class Game(Screen):
     pass
 
+class Question(Screen):
+    pass
+
 class CongratulationScreen(Screen):
     pass
+
 
 class MyScreenManager(ScreenManager):
     pass
@@ -37,6 +42,7 @@ MyScreenManager:
     MapScreen:
     Game:
     CongratulationScreen:
+    Question:
 
 <Welcome>:
     name: 'welcome'
@@ -110,17 +116,36 @@ MyScreenManager:
             Button:
                 text: 'Play Games'
                 font_size: 30
-                on_release: app.root.current = 'game'
+                on_release: app.root.current = 'QuestionAnswer'
 <Game>:
     name:'game'
     BoxLayout:
         orientation: 'vertical'
         DrawInput:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
         Button:
             text: 'Back'
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
+<Question>:
+    name: "question"
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswer:
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
+
+
+
+
+
+
 ''')
 
 class ScreenManagerApp(App):
