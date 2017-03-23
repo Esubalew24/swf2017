@@ -30,7 +30,7 @@ Builder.load_string('''
     padding: 10
     spacing: 10
 
-    # ---------- Holds CheckBox and RadioBox ----------
+
     BoxLayout:
         orientation: "vertical"
         height: 30
@@ -49,7 +49,7 @@ Builder.load_string('''
             size_hint_x: .55
             CustLabel:
                 text: "Favorite Color"
-                color: 0, 0, 0, 1
+                color: 1, 1, 1, 1
                 size_hint_x: .265
             CheckBox:
                 group: "fav_color"
@@ -57,7 +57,7 @@ Builder.load_string('''
                 size_hint_x: .05
             CustLabel:
                 text: "Blue"
-                color: 0, 0, 0, 1
+                color: 1, 1, 1, 1
                 size_hint_x: .15
             CheckBox:
                 group: "fav_color"
@@ -65,7 +65,7 @@ Builder.load_string('''
                 size_hint_x: .05
             CustLabel:
                 text: "Red"
-                color: 0, 0, 0, 1
+                color: 1, 1, 1, 1
                 size_hint_x: .15
             CheckBox:
                 group: "fav_color"
@@ -73,10 +73,9 @@ Builder.load_string('''
                 size_hint_x: .05
             CustLabel:
                 text: "Green"
-                color: 0, 0, 0, 1
+                color: 1, 1, 1, 1
                 size_hint_x: .15
 
-    # ---------- Holds Slider & Switch ----------
     BoxLayout:
         orientation: "horizontal"
         height: 30
@@ -99,7 +98,6 @@ Builder.load_string('''
                 on_press: root.open_popup()
 
      ''')
-
 
 # Used to display popup
 class ResultPopup(Popup):
@@ -125,6 +123,3 @@ class QuestionAnswer(BoxLayout):
     def open_popup(self):
         the_popup = ResultPopup()
         the_popup.open()
-
-
-
