@@ -64,9 +64,10 @@ MyScreenManager:
             size_hint: 1, None
             Button:
                 text: 'Next'
-                size_hint: 0.3, 0.6
-                pos_hint: {'x': 0.35, 'y': 0.2}
-                font_size: 30
+                size_hint: 0.3, 1.0
+                pos_hint: {'x': 0.35, 'y': 1.0}
+                font_size: 70
+                background_color: (0.0, 0.0, 1.0, 0.5)
                 on_release: app.root.current = 'second'
 
 <SecondScreen>:
@@ -82,9 +83,10 @@ MyScreenManager:
             size_hint: 1, None
             Button:
                 text: 'Map'
-                size_hint: 0.3, 0.6
-                pos_hint: {'x': 0.35, 'y': 0.2}
-                font_size: 30
+                size_hint: 0.3, 1.0
+                pos_hint: {'x': 0.35, 'y': 1.0}
+                font_size: 70
+                background_color: (0.0, 0.0, 1.0, 0.5)
                 on_release: app.root.current = 'third'
 
 <MapScreen>:
