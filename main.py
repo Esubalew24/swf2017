@@ -82,12 +82,20 @@ MyScreenManager:
         FloatLayout:
             size_hint: 1, None
             Button:
-                text: 'Map'
+                text: 'Next'
                 size_hint: 0.3, 1.0
-                pos_hint: {'x': 0.35, 'y': 1.0}
+                pos_hint: {'x': 0.65, 'y': 1.0}
                 font_size: 70
                 background_color: (0.0, 0.0, 1.0, 0.5)
                 on_release: app.root.current = 'third'
+                
+            Button:
+                text: 'Back'
+                size_hint: 0.3, 1.0
+                pos_hint: {'x': 0.01, 'y': 1.0}
+                font_size: 70
+                background_color: (0.0, 0.0, 1.0, 0.5)
+                on_release: app.root.current = 'welcome'   
 
 <MapScreen>:
     name: 'third'
