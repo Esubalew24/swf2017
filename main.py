@@ -81,60 +81,122 @@ MyScreenManager:
             keep_ratio: False
         FloatLayout:
             size_hint: 1, None
+                
+            Button:
+                text: 'Back'
+                size_hint: 0.3, 1.0
+                pos_hint: {'x': 0.05, 'y': 1.0}
+                font_size: 70
+                background_color: (0.0, 0.0, 1.0, 0.5)
+                on_release: app.root.current = 'welcome'   
+            
             Button:
                 text: 'Next'
                 size_hint: 0.3, 1.0
                 pos_hint: {'x': 0.65, 'y': 1.0}
                 font_size: 70
                 background_color: (0.0, 0.0, 1.0, 0.5)
-                on_release: app.root.current = 'third'
-                
-            Button:
-                text: 'Back'
-                size_hint: 0.3, 1.0
-                pos_hint: {'x': 0.01, 'y': 1.0}
-                font_size: 70
-                background_color: (0.0, 0.0, 1.0, 0.5)
-                on_release: app.root.current = 'welcome'   
-
+                on_release: app.root.current = 'third'    
+            
 <MapScreen>:
     name: 'third'
     BoxLayout:
         orientation: 'vertical'
-        MapView:
-            zoom: 17
-            lat: 65.0593
-            lon: 25.4663
-            MapMarker:
-                title: "Restaurant"
-                lat: 65.0600012
-                lon: 25.4645286
-                on_release: app.root.current = 'minigame3'
-
-            MapMarker:
-                title: "Somewhere"
-                lat: 65.0593177
-                lon: 25.466293500000006
-                on_release: app.root.current = 'question'
-
-            MapMarker:
-                title: "Ravintola Stories"
-                lat: 65.05820786309047
-                lon: 25.466705560684204
-                on_release: app.root.current = 'drawing'
-
-            MapMarker:
-                title: "Oulun Yliopisto Kauppakorkeakoulu"
-                lat: 65.06031611340609
-                lon: 25.468658208847046
-                on_release: app.root.current = 'minigame3'
-
-        BoxLayout:
-            size_hint: 1, None
-            Button:
-                text: 'Play Games'
-                font_size: 30
-                on_release: app.root.current = 'question'
+        RelativeLayout:
+            MapView:
+                lat: 65.0593
+                lon: 25.4663
+                zoom: 17
+                
+                MapMarker:
+                    title: "Restaurant"
+                    lat: 65.0600012
+                    lon: 25.4645286
+                    on_release: app.root.current = 'minigame3'
+    
+                MapMarker:
+                    title: "Somewhere"
+                    lat: 65.0593177
+                    lon: 25.466293500000006
+                    on_release: app.root.current = 'question'
+    
+               
+                MapMarkerPopup:
+                    name: 'Tellus'
+                    lat: 65.058824
+                    lon: 25.467081
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Tellus.png"
+                                mipmap: True
+                            Label:
+                                text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena is a brand new, \\n inspiring open space for learning, collaboration and \\n entrepreneurship at Uni of Oulu"
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'minigame3'
+                                
+                                
+                MapMarkerPopup:
+                    name: 'Student_Center'
+                    lat: 65.059813
+                    lon: 25.465233
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "student_center.png"
+                                mipmap: True
+                            Label:
+                                text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'
+                
+                
+                MapMarkerPopup:
+                    name: 'OYY'
+                    lat: 65.059053
+                    lon: 25.46596
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "OYY.png"
+                                mipmap: True
+                            Label:
+                                text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                
+                                font_size: 30
+                                on_release: app.root.current = 'question'   
+                                
+                                
+                            
+        
+        
 <Game>:
     name:'game'
     BoxLayout:
