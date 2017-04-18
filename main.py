@@ -108,18 +108,7 @@ MyScreenManager:
                 lon: 25.4663
                 zoom: 17
                 
-                MapMarker:
-                    title: "Restaurant"
-                    lat: 65.0600012
-                    lon: 25.4645286
-                    on_release: app.root.current = 'minigame3'
-    
-                MapMarker:
-                    title: "Somewhere"
-                    lat: 65.0593177
-                    lon: 25.466293500000006
-                    on_release: app.root.current = 'question'
-    
+                
                
                 MapMarkerPopup:
                     name: 'Tellus'
@@ -204,7 +193,7 @@ MyScreenManager:
                             padding: "5dp"
                             AsyncImage:
                                 source: "Library.png"
-                                mipmap: False
+                                mipmap: True
                             Label:
                                 text: "[b]Library[/b]\\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
                                 markup: True
@@ -310,6 +299,104 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 font_size: 30
                                 on_release: app.root.current = 'question'
+                
+                MapMarkerPopup:
+                    name: 'PSOAS'
+                    lat: 65.05733
+                    lon: 25.467344
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Psoas.png"
+                               
+                            Label:
+                                text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'
+                
+                MapMarkerPopup:
+                    name: 'Saalasti Hall'
+                    lat: 65.056928
+                    lon: 25.468709
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Salastti_hall.png"
+                            Label:
+                                text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
+                                markup: True
+                                halign: "center"
+                MapMarkerPopup:
+                    name: 'KTK112'
+                    lat: 65.061765
+                    lon: 25.469892
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Faculty of education.png"
+                            Label:
+                                text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
+                                markup: True
+                                halign: "center"
+                MapMarkerPopup:
+                    name: 'Stories'
+                    lat: 65.058493
+                    lon: 25.466995
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Faculty of technology and story.png"
+                            Label:
+                                text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
+                                markup: True
+                                halign: "center"
+                MapMarkerPopup:
+                    name: 'L6'
+                    lat: 65.059941
+                    lon: 25.466303
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "faculty of science.png"
+                            Label:
+                                text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
+                                markup: True
+                                halign: "center"
+                MapMarkerPopup:
+                    name: 'Aava'
+                    lat:  65.060479
+                    lon:  25.46656
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "aava and restaurant.png"
+                            Label:
+                                text: "Student prices for\\nthe meals are:\\nbasic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
+                                halign: "center"
                 
                 
                 
