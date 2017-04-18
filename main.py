@@ -192,10 +192,128 @@ MyScreenManager:
                                 
                                 font_size: 30
                                 on_release: app.root.current = 'question'   
-                                
-                                
+                
+                MapMarkerPopup:
+                    name: 'Library'
+                    lat: 65.061484
+                    lon: 25.466539
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Library.png"
+                                mipmap: False
+                            Label:
+                                text: "[b]Library[/b]\\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
+                                markup: True
+                                halign: "left"
                             
-        
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                
+                                font_size: 30
+                                on_release: app.root.current = 'question'
+                
+                
+                MapMarkerPopup:
+                    name: 'Fab_Lab'
+                    lat: 65.058953
+                    lon: 25.466985
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Library.png"
+                               
+                            Label:
+                                text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'                
+                
+                MapMarkerPopup:
+                    name: 'Faculty of ITEE'
+                    lat: 65.057949
+                    lon: 25.468455
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Faculty of ITEE.png"
+                               
+                            Label:
+                                text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'                    
+                
+                
+                MapMarkerPopup:
+                    name: 'Zoological_Museum'
+                    lat: 65.060597
+                    lon: 25.466931
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "zoological_museum.png"
+                               
+                            Label:
+                                text: "[b]Zoological Museum[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'            
+                
+                MapMarkerPopup:
+                    name: 'Balance'
+                    lat: 65.061035
+                    lon: 25.468079
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Faculty of Humanities.png"
+                               
+                            Label:
+                                text: "[b]Balance[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question'
+                
+                
+                
+                
         
 <Game>:
     name:'game'
