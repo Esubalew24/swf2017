@@ -1,0 +1,4 @@
+SSL=/Users/Esubalew/Desktop/swf2017/.buildozer/android/platform/build/build/other_builds/openssl/armeabi-v7a/openssl
+_ssl _ssl.c \
+  -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+  -L$(SSL) -lssl$(OPENSSL_VERSION) -lcrypto$(OPENSSL_VERSION)
