@@ -7,6 +7,7 @@ from play import DrawInput
 from question import QuestionAnswer
 from minigame3.main import TicTacToe
 from drawing import Painter
+from memorize import MemorizeGame
 
 class CustomPopup(Popup):
     pass
@@ -32,6 +33,9 @@ class Minigame3(Screen):
 class Drawing(Screen):
     pass
 
+class Memorize(Screen):
+    pass
+
 class CongratulationScreen(Screen):
     pass
 
@@ -50,6 +54,7 @@ MyScreenManager:
     Question:
     Minigame3:
     Drawing:
+    Memorize:
     CongratulationScreen:
 
 <Welcome>:
@@ -180,7 +185,7 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 
                                 font_size: 30
-                                on_release: app.root.current = 'question'   
+                                on_release: app.root.current = 'memorize'   
                 
                 MapMarkerPopup:
                     name: 'Library'
@@ -228,7 +233,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'                
+                                on_release: app.root.current = 'memorize'                
                 
                 MapMarkerPopup:
                     name: 'Faculty of ITEE'
@@ -454,6 +459,20 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
+<Memorize>:
+    name: 'memorize'
+    BoxLayout:
+        orientation: 'vertical'
+        MemorizeGame:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
+
 
 ''')
 
