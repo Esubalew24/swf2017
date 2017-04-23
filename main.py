@@ -9,7 +9,10 @@ from question_tellus import QuestionAnswerTellus
 from question_student_center import QuestionAnswerStudentCenter
 from question_balance import QuestionAnswerBalance
 from question_oyy import QuestionAnswerOyy
-
+from question_library import QuestionAnswerLibrary
+from question_datagarage import QuestionAnswerDatagarage
+from question_fablab import QuestionAnswerFablab
+from question_zoological_museum import QuestionAnswerZoologicalMuseum
 from minigame3.main import TicTacToe
 from drawing import Painter
 
@@ -81,6 +84,10 @@ MyScreenManager:
     Question_student_center:
     Question_balance:
     Question_oyy:
+    Question_library:
+    Question_datagarage:
+    Question_fablab:
+    Question_zoological_museum:
     Minigame3:
     Drawing:
     CongratulationScreen:
@@ -237,7 +244,7 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 
                                 font_size: 30
-                                on_release: app.root.current = 'question'
+                                on_release: app.root.current = 'question_library'
                 
                 
                 MapMarkerPopup:
@@ -261,7 +268,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'                
+                                on_release: app.root.current = 'question_fablab'                
                 
                 MapMarkerPopup:
                     name: 'Faculty of ITEE'
@@ -284,7 +291,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'                    
+                                on_release: app.root.current = 'Question_datagarage'                    
                 
                 
                 MapMarkerPopup:
@@ -308,7 +315,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'            
+                                on_release: app.root.current = 'question_zoological_museum'            
                 
                 MapMarkerPopup:
                     name: 'Balance'
@@ -502,7 +509,19 @@ MyScreenManager:
             font_size: 30
             on_release: app.root.current = 'third'             
 
-
+<Question_library>:
+    name: 'question_library'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerLibrary:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
 
 <Question_balance>:
     name: 'question_balance'
@@ -518,6 +537,47 @@ MyScreenManager:
             font_size: 30
             on_release: app.root.current = 'third'             
 
+<Question_datagarage>:
+    name: 'question_datagarage'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerDatagarage:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
+
+<Question_fablab>:
+    name: 'question_fablab'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerFablab:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'    
+                
+<Question_zoological_museum>:
+    name: 'question_zoological_museum'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerZoologicalMuseum:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
             
 <Minigame3>:
     name: 'minigame3'

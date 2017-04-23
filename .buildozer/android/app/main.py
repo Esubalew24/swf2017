@@ -5,6 +5,14 @@ from kivy.garden.mapview import MapView, MapMarker
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from play import DrawInput
 from question import QuestionAnswer
+from question_tellus import QuestionAnswerTellus
+from question_student_center import QuestionAnswerStudentCenter
+from question_balance import QuestionAnswerBalance
+from question_oyy import QuestionAnswerOyy
+from question_library import QuestionAnswerLibrary
+from question_datagarage import QuestionAnswerDatagarage
+from question_fablab import QuestionAnswerFablab
+from question_zoological_museum import QuestionAnswerZoologicalMuseum
 from minigame3.main import TicTacToe
 from drawing import Painter
 
@@ -24,6 +32,30 @@ class Game(Screen):
     pass
 
 class Question(Screen):
+    pass
+
+class Question_tellus(Screen):
+    pass
+
+class Question_student_center(Screen):
+    pass
+
+class Question_balance(Screen):
+    pass
+
+class Question_datagarage(Screen):
+    pass
+
+class Question_fablab(Screen):
+    pass
+
+class Question_library(Screen):
+    pass
+
+class Question_oyy(Screen):
+    pass
+
+class Question_zoological_museum(Screen):
     pass
 
 class Minigame3(Screen):
@@ -48,6 +80,14 @@ MyScreenManager:
     MapScreen:
     Game:
     Question:
+    Question_tellus:
+    Question_student_center:
+    Question_balance:
+    Question_oyy:
+    Question_library:
+    Question_datagarage:
+    Question_fablab:
+    Question_zoological_museum:
     Minigame3:
     Drawing:
     CongratulationScreen:
@@ -131,7 +171,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'minigame3'
+                                on_release: app.root.current = 'question_tellus'
                                 
                                 
                 MapMarkerPopup:
@@ -155,11 +195,11 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'
+                                on_release: app.root.current = 'question_student_center'
                 
                 
                 MapMarkerPopup:
-                    name: 'OYY'
+                    name: 'oyy'
                     lat: 65.059053
                     lon: 25.46596
                     popup_size: dp(430), dp(280)
@@ -180,7 +220,7 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 
                                 font_size: 30
-                                on_release: app.root.current = 'question'   
+                                on_release: app.root.current = 'question_oyy'   
                 
                 MapMarkerPopup:
                     name: 'Library'
@@ -204,7 +244,7 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 
                                 font_size: 30
-                                on_release: app.root.current = 'question'
+                                on_release: app.root.current = 'question_library'
                 
                 
                 MapMarkerPopup:
@@ -228,7 +268,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'                
+                                on_release: app.root.current = 'question_fablab'                
                 
                 MapMarkerPopup:
                     name: 'Faculty of ITEE'
@@ -251,7 +291,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'                    
+                                on_release: app.root.current = 'Question_datagarage'                    
                 
                 
                 MapMarkerPopup:
@@ -275,7 +315,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'            
+                                on_release: app.root.current = 'question_zoological_museum'            
                 
                 MapMarkerPopup:
                     name: 'Balance'
@@ -298,7 +338,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'
+                                on_release: app.root.current = 'question_balance'
                 
                 MapMarkerPopup:
                     name: 'PSOAS'
@@ -398,9 +438,6 @@ MyScreenManager:
                                 text: "Student prices for\\nthe meals are:\\nbasic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
                                 halign: "center"
                 
-                
-                
-                
         
 <Game>:
     name:'game'
@@ -415,8 +452,9 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
+            
 <Question>:
-    name: 'question'
+    name: 'question_OYY'
     BoxLayout:
         orientation: 'vertical'
         QuestionAnswer:
@@ -428,6 +466,119 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
+            
+<Question_tellus>:
+    name: 'question_tellus'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerTellus:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
+            
+<Question_student_center>:
+    name: 'question_student_center'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerStudentCenter:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'            
+
+<Question_oyy>:
+    name: 'question_oyy'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerOyy:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
+
+<Question_library>:
+    name: 'question_library'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerLibrary:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
+
+<Question_balance>:
+    name: 'question_balance'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerBalance:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
+
+<Question_datagarage>:
+    name: 'question_datagarage'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerDatagarage:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'             
+
+<Question_fablab>:
+    name: 'question_fablab'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerFablab:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'    
+                
+<Question_zoological_museum>:
+    name: 'question_zoological_museum'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerZoologicalMuseum:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+            
 <Minigame3>:
     name: 'minigame3'
     BoxLayout:

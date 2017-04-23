@@ -16,72 +16,66 @@ Builder.load_string('''
 <CustLabel@Label>:
     color: 0, 0, 0, 1
 
-<ResultPopup>:
-    size_hint: .5, .5
-    auto_dismiss: False
-    title: "The Popup"
-    Button:
-        text: "Close"
-        on_press: root.dismiss()
-
-
 <QuestionAnswerTellus>:
     orientation: "vertical"
     padding: 10
-    spacing: 10
+    
 
     # ---------- Holds CheckBox and RadioBox ----------
     BoxLayout:
         orientation: "vertical"
         height: 30
-
-        BoxLayout:
-            orientation: "vertical"
-            size_hint_x: .22
-            CustLabel:
-                text: "Are you over 20"
-                size_hint_x: .80
-            CheckBox:
-                on_active: root.checkbox_18_clicked(self, self.active)
-                size_hint_x: .20
         BoxLayout:
             orientation: "horizontal"
-            size_hint_x: .55
+            size_hint_x: .25
             CustLabel:
-                text: " Favorite Color?"
+                text: " Favorite Color?  "
                 color: 0, 0, 0, 1
                 size_hint_x: .265
+               
+        
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .10
             CheckBox:
                 group: "fav_color"
                 value: root.blue
-                size_hint_x: .05
             CustLabel:
                 text: " Blue"
                 color: 0, 0, 0, 1
-                size_hint_x: .15
+        
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .10
             CheckBox:
                 group: "fav_color"
-                value: root.red
-                size_hint_x: .05
+                value: root.blue
+              
             CustLabel:
                 text: " Red"
-                color: 0, 0, 0, 1
-                size_hint_x: .15
+                color: 0, 0, 0, 1       
+            
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .10
             CheckBox:
                 group: "fav_color"
-                value: root.green
-                size_hint_x: .05
+                value: root.blue
+              
             CustLabel:
-                text: " Green"
-                color: 0, 0, 0, 1
-                size_hint_x: .15
-
-    # ---------- Holds Slider & Switch ----------
-    BoxLayout:
-        orientation: "horizontal"
-        height: 30
-
-
+                text: " Yellow"
+                color: 0, 0, 0, 1 
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .10
+            CheckBox:
+                group: "fav_color"
+                value: root.blue
+              
+            CustLabel:
+                text: " Whatever"
+                color: 0, 0, 0, 1              
+    
 
 
      ''')
