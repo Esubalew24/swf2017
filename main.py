@@ -338,7 +338,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                                on_release: app.root.current = 'question_balance'
                 
                 MapMarkerPopup:
                     name: 'PSOAS'
@@ -378,6 +378,13 @@ MyScreenManager:
                                 text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
                                 markup: True
                                 halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_oyy'
+                
                 MapMarkerPopup:
                     name: 'KTK112'
                     lat: 65.061765
@@ -393,6 +400,13 @@ MyScreenManager:
                                 text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
                                 markup: True
                                 halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_oyy'    
+                            
                 MapMarkerPopup:
                     name: 'Stories'
                     lat: 65.058493
@@ -408,6 +422,13 @@ MyScreenManager:
                                 text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
                                 markup: True
                                 halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_oyy'
+                            
                 MapMarkerPopup:
                     name: 'L6'
                     lat: 65.059941
@@ -423,6 +444,12 @@ MyScreenManager:
                                 text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
                                 markup: True
                                 halign: "center"
+                                
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_oyy'
                 MapMarkerPopup:
                     name: 'Aava'
                     lat:  65.060479
@@ -437,6 +464,12 @@ MyScreenManager:
                             Label:
                                 text: "Student prices for\\nthe meals are:\\nbasic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
                                 halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_oyy'
                 
         
 <Game>:

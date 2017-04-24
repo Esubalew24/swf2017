@@ -82,8 +82,6 @@ Builder.load_string('''
         height: 30
 
 
-
-
      ''')
 
 
