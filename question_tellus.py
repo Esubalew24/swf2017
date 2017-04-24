@@ -27,9 +27,8 @@ Builder.load_string('''
         height: 30
         BoxLayout:
             orientation: "horizontal"
-            size_hint_x: .25
             CustLabel:
-                text: " Favorite Color?  "
+                text: " Favorite Color? "
                 color: 0, 0, 0, 1
                 size_hint_x: .265
                
@@ -37,19 +36,22 @@ Builder.load_string('''
         BoxLayout:
             orientation: "horizontal"
             size_hint_x: .10
+            size_hint_y: .30
             CheckBox:
                 group: "fav_color"
                 value: root.blue
             CustLabel:
                 text: " Blue"
                 color: 0, 0, 0, 1
-        
+            
         BoxLayout:
             orientation: "horizontal"
             size_hint_x: .10
+            size_hint_y: .30
             CheckBox:
                 group: "fav_color"
                 value: root.blue
+                
               
             CustLabel:
                 text: " Red"
@@ -58,6 +60,7 @@ Builder.load_string('''
         BoxLayout:
             orientation: "horizontal"
             size_hint_x: .10
+            size_hint_y: .30
             CheckBox:
                 group: "fav_color"
                 value: root.blue
@@ -68,6 +71,7 @@ Builder.load_string('''
         BoxLayout:
             orientation: "horizontal"
             size_hint_x: .10
+            size_hint_y: .30
             CheckBox:
                 group: "fav_color"
                 value: root.blue
@@ -75,8 +79,8 @@ Builder.load_string('''
             CustLabel:
                 text: " Whatever"
                 color: 0, 0, 0, 1              
-    
-
+            
+            
 
      ''')
 

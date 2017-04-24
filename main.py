@@ -154,7 +154,7 @@ MyScreenManager:
                     name: 'Tellus'
                     lat: 65.058824
                     lon: 25.467081
-                    popup_size: dp(430), dp(280)
+                    popup_size: dp(380), dp(250)
                     Bubble:
                         BoxLayout:
                             orientation: "horizontal"
@@ -163,7 +163,7 @@ MyScreenManager:
                                 source: "Tellus.png"
                                 mipmap: True
                             Label:
-                                text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena is a brand new, \\n inspiring open space for learning, collaboration and \\n entrepreneurship at Uni of Oulu"
+                                text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
                                 markup: True
                                 halign: "center"
                             
@@ -202,7 +202,7 @@ MyScreenManager:
                     name: 'oyy'
                     lat: 65.059053
                     lon: 25.46596
-                    popup_size: dp(430), dp(280)
+                    popup_size: dp(400), dp(250)
                     Bubble:
                         BoxLayout:
                             orientation: "horizontal"
@@ -291,7 +291,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'Question_datagarage'                    
+                                on_release: app.root.current = 'question_oyy'                    
                 
                 
                 MapMarkerPopup:
@@ -315,7 +315,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_zoological_museum'            
+                                on_release: app.root.current = 'question_oyy'            
                 
                 MapMarkerPopup:
                     name: 'Balance'
@@ -338,7 +338,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_balance'
+                                on_release: app.root.current = 'question_oyy'
                 
                 MapMarkerPopup:
                     name: 'PSOAS'
@@ -361,7 +361,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question'
+                                on_release: app.root.current = 'question_oyy'
                 
                 MapMarkerPopup:
                     name: 'Saalasti Hall'
