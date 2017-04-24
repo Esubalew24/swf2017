@@ -104,7 +104,7 @@ MyScreenManager:
             size_hint: 1, None
             Button:
                 text: 'Next'
-                size_hint: 0.3, 1.0
+                size_hint: 0.3, 1.3
                 pos_hint: {'x': 0.35, 'y': 1.0}
                 font_size: 70
                 background_color: (0.0, 0.0, 1.0, 0.5)
@@ -124,7 +124,7 @@ MyScreenManager:
                 
             Button:
                 text: 'Back'
-                size_hint: 0.3, 1.0
+                size_hint: 0.3, 1.3
                 pos_hint: {'x': 0.05, 'y': 1.0}
                 font_size: 70
                 background_color: (0.0, 0.0, 1.0, 0.5)
@@ -132,7 +132,7 @@ MyScreenManager:
             
             Button:
                 text: 'Next'
-                size_hint: 0.3, 1.0
+                size_hint: 0.3, 1.3
                 pos_hint: {'x': 0.65, 'y': 1.0}
                 font_size: 70
                 background_color: (0.0, 0.0, 1.0, 0.5)
