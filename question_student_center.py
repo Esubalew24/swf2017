@@ -39,7 +39,7 @@ Builder.load_string('''
             orientation: "vertical"
             size_hint_x: .22
             CustLabel:
-                text: "Are you over 22"
+                text: "Are you over 22 - STUDENT CENTER"
                 size_hint_x: .80
             CheckBox:
                 on_active: root.checkbox_18_clicked(self, self.active)

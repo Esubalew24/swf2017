@@ -28,7 +28,7 @@ Builder.load_string('''
         BoxLayout:
             orientation: "horizontal"
             CustLabel:
-                text: " Favorite Color? "
+                text: " Favorite Color? - TELLUS "
                 color: 0, 0, 0, 1
                 size_hint_x: .265
                
@@ -77,7 +77,7 @@ Builder.load_string('''
                 value: root.blue
               
             CustLabel:
-                text: " Whatever"
+                text: " Whatever Whatever Whatever "
                 color: 0, 0, 0, 1              
             
             

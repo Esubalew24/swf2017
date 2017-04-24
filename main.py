@@ -13,6 +13,13 @@ from question_library import QuestionAnswerLibrary
 from question_datagarage import QuestionAnswerDatagarage
 from question_fablab import QuestionAnswerFablab
 from question_zoological_museum import QuestionAnswerZoologicalMuseum
+from question_saalasti_hall import QuestionAnswerSaalastiHall
+from question_faculity_of_education import QuestionAnswerFaculityOfEducation
+from question_stories import QuestionAnswerStories
+from question_faculty_of_science import QuestionAnswerFaculityOfScience
+from question_aava import QuestionAnswerAava
+from question_psoas import QuestionAnswerPsoas
+
 from minigame3.main import TicTacToe
 from drawing import Painter
 
@@ -58,6 +65,24 @@ class Question_oyy(Screen):
 class Question_zoological_museum(Screen):
     pass
 
+class Question_saalasti_hall(Screen):
+    pass
+
+class Question_faculity_of_education(Screen):
+    pass
+
+class Question_stories(Screen):
+    pass
+
+class Question_faculity_of_science(Screen):
+    pass
+
+class Question_aava(Screen):
+    pass
+
+class Question_psoas(Screen):
+    pass
+
 class Minigame3(Screen):
     pass
 
@@ -88,6 +113,13 @@ MyScreenManager:
     Question_datagarage:
     Question_fablab:
     Question_zoological_museum:
+    Question_saalasti_hall:
+    Question_faculity_of_education:
+    Question_stories:
+    Question_faculity_of_science:
+    Question_aava:
+    Question_psoas:
+    
     Minigame3:
     Drawing:
     CongratulationScreen:
@@ -340,28 +372,7 @@ MyScreenManager:
                                 font_size: 30
                                 on_release: app.root.current = 'question_balance'
                 
-                MapMarkerPopup:
-                    name: 'PSOAS'
-                    lat: 65.05733
-                    lon: 25.467344
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Psoas.png"
-                               
-                            Label:
-                                text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
-                                markup: True
-                                halign: "center"
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                
                 
                 MapMarkerPopup:
                     name: 'Saalasti Hall'
@@ -383,7 +394,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                                on_release: app.root.current = 'question_saalasti_hall'
                 
                 MapMarkerPopup:
                     name: 'KTK112'
@@ -405,7 +416,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'    
+                                on_release: app.root.current = 'question_faculity_of_education'    
                             
                 MapMarkerPopup:
                     name: 'Stories'
@@ -427,7 +438,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                                on_release: app.root.current = 'question_stories'
                             
                 MapMarkerPopup:
                     name: 'L6'
@@ -449,7 +460,7 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                                on_release: app.root.current = 'question_faculity_of_science'
                 MapMarkerPopup:
                     name: 'Aava'
                     lat:  65.060479
@@ -469,8 +480,30 @@ MyScreenManager:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
                                 font_size: 30
-                                on_release: app.root.current = 'question_oyy'
+                                on_release: app.root.current = 'question_aava'
                 
+                MapMarkerPopup:
+                    name: 'PSOAS'
+                    lat: 65.05733
+                    lon: 25.467344
+                    popup_size: dp(430), dp(280)
+                    Bubble:
+                        BoxLayout:
+                            orientation: "horizontal"
+                            padding: "5dp"
+                            AsyncImage:
+                                source: "Psoas.png"
+                               
+                            Label:
+                                text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
+                                markup: True
+                                halign: "center"
+                            
+                            Button:
+                                text: 'Play'
+                                size_hint: 0.4, 0.25
+                                font_size: 30
+                                on_release: app.root.current = 'question_psoas'
         
 <Game>:
     name:'game'
@@ -612,6 +645,92 @@ MyScreenManager:
             font_size: 30
             on_release: app.root.current = 'third' 
             
+<Question_saalasti_hall>:
+    name: 'question_saalasti_hall'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerSaalastiHall:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+
+<Question_faculity_of_education>:
+    name: 'question_faculity_of_education'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerFaculityOfEducation:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third'
+            
+<Question_stories>:
+    name: 'question_stories'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerStories:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+
+<Question_faculity_of_science>:
+    name: 'question_faculity_of_science'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerFaculityOfScience:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+
+<Question_aava>:
+    name: 'question_aava'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerAava:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+
+<Question_psoas>:
+    name: 'question_psoas'
+    BoxLayout:
+        orientation: 'vertical'
+        QuestionAnswerPsoas:
+            orientation: "vertical"
+            padding: 50
+            spacing: 50
+        Button:
+            text: 'Back'
+            size_hint: 1, None
+            font_size: 30
+            on_release: app.root.current = 'third' 
+
+
+    
 <Minigame3>:
     name: 'minigame3'
     BoxLayout:
