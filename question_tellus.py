@@ -17,68 +17,37 @@ Builder.load_string('''
     color: 0, 0, 0, 1
 
 <QuestionAnswerTellus>:
-    orientation: "vertical"
-    padding: 10
     
-
-    # ---------- Holds CheckBox and RadioBox ----------
     BoxLayout:
         orientation: "vertical"
-        height: 30
-        BoxLayout:
-            orientation: "horizontal"
-            CustLabel:
-                text: " Favorite Color? - TELLUS "
-                color: 0, 0, 0, 1
-                size_hint_x: .265
-               
-        
-        BoxLayout:
-            orientation: "horizontal"
-            size_hint_x: .10
-            size_hint_y: .30
-            CheckBox:
-                group: "fav_color"
-                value: root.blue
-            CustLabel:
-                text: " Blue"
-                color: 0, 0, 0, 1
-            
-        BoxLayout:
-            orientation: "horizontal"
-            size_hint_x: .10
-            size_hint_y: .30
-            CheckBox:
-                group: "fav_color"
-                value: root.blue
-                
-              
-            CustLabel:
-                text: " Red"
-                color: 0, 0, 0, 1       
-            
-        BoxLayout:
-            orientation: "horizontal"
-            size_hint_x: .10
-            size_hint_y: .30
-            CheckBox:
-                group: "fav_color"
-                value: root.blue
-              
-            CustLabel:
-                text: " Yellow"
-                color: 0, 0, 0, 1 
-        BoxLayout:
-            orientation: "horizontal"
-            size_hint_x: .10
-            size_hint_y: .30
-            CheckBox:
-                group: "fav_color"
-                value: root.blue
-              
-            CustLabel:
-                text: " Whatever Whatever Whatever "
-                color: 0, 0, 0, 1              
+        CustLabel:
+            text: "Which event was held to celebrates international \\n cultures and cooperation in Tellus innovation area on \\n April 3rd,2017?  "
+            color: 0, 0, 0, 1
+        CheckBox:
+            group: "fav_color"
+            value: root.blue
+        CustLabel:
+            text: "International avenue"
+            color: 0, 0, 0, 1
+        CheckBox:
+            group: "fav_color"
+            value: root.blue
+        CustLabel:
+            text: " Polar bear pitching"
+            color: 0, 0, 0, 1
+        CheckBox:
+            group: "fav_color"
+            value: root.blue
+        CustLabel:
+            text: " International food festival"
+            color: 0, 0, 0, 1
+        CheckBox:
+            group: "fav_color"
+            value: root.blue
+        CustLabel:
+            text: " Start-up week"
+            color: 0, 0, 0, 1   
+                   
             
             
 

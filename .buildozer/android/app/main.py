@@ -289,7 +289,7 @@ MyScreenManager:
                             orientation: "horizontal"
                             padding: "5dp"
                             AsyncImage:
-                                source: "Library.png"
+                                source: "fab lab.png"
                                
                             Label:
                                 text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
@@ -473,7 +473,7 @@ MyScreenManager:
                             AsyncImage:
                                 source: "aava and restaurant.png"
                             Label:
-                                text: "Student prices for\\nthe meals are:\\nbasic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
+                                text: "Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
                                 halign: "center"
                             
                             Button:

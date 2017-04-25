@@ -81,9 +81,6 @@ Builder.load_string('''
         orientation: "horizontal"
         height: 30
 
-
-
-
      ''')
 
 
