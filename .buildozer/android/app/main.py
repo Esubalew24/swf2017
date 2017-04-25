@@ -195,9 +195,19 @@ MyScreenManager:
                                 source: "Tellus.png"
                                 mipmap: True
                             Label:
+                                
                                 text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
                                 markup: True
                                 halign: "center"
+                            
+                                Label:
+                                    text: '[ref=http://www.oulu.fi/university/] More Info Here [/ref]'
+                                    markup: True
+                                    color: 0,0,1,1
+                                    halign: "center"
+                                    on_ref_press:
+                                        import webbrowser
+                                        webbrowser.open(args[1])    
                             
                             Button:
                                 text: 'Play'
@@ -222,6 +232,21 @@ MyScreenManager:
                                 text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
                                 markup: True
                                 halign: "center"
+                            
+                            Label:
+                                
+                                text: '[ref=http://www.oulu.fi/university/]More Info in English[/ref]'
+                                text_size: None, None
+                                size_hint_y: None
+                                pos_hint:{'center_x':0.5, 'y': 0.20}
+                                size: (50, 44)
+                                color: 0,0,1,1
+                                markup: True
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open(args[1])
+                                    
+                    
                             
                             Button:
                                 text: 'Play'
@@ -250,7 +275,6 @@ MyScreenManager:
                             Button:
                                 text: 'Play'
                                 size_hint: 0.4, 0.25
-                                
                                 font_size: 30
                                 on_release: app.root.current = 'question_oyy'   
                 
@@ -267,7 +291,7 @@ MyScreenManager:
                                 source: "Library.png"
                                 mipmap: True
                             Label:
-                                text: "[b]Library[/b]\\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
+                                text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
                                 markup: True
                                 halign: "left"
                             
@@ -339,7 +363,7 @@ MyScreenManager:
                                 source: "zoological_museum.png"
                                
                             Label:
-                                text: "[b]Zoological Museum[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                                text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
                                 markup: True
                                 halign: "center"
                             
@@ -362,7 +386,7 @@ MyScreenManager:
                                 source: "Faculty of Humanities.png"
                                
                             Label:
-                                text: "[b]Balance[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
+                                text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
                                 markup: True
                                 halign: "center"
                             
@@ -411,6 +435,7 @@ MyScreenManager:
                                 text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
                                 markup: True
                                 halign: "center"
+                                
                             
                             Button:
                                 text: 'Play'
@@ -473,7 +498,7 @@ MyScreenManager:
                             AsyncImage:
                                 source: "aava and restaurant.png"
                             Label:
-                                text: "Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
+                                text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
                                 halign: "center"
                             
                             Button:

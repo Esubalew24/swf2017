@@ -383,7 +383,7 @@ MyScreenManager:
                             orientation: "horizontal"
                             padding: "5dp"
                             AsyncImage:
-                                source: "Faculty of Humanities.png"
+                                source: "faculty of humanities.jpg"
                                
                             Label:
                                 text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
