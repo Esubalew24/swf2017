@@ -1,10 +1,9 @@
 [app]
 
 # (str) Title of your application
-title = Oulu
-
+title = oulu
 # (str) Package name
-package.name = oulu
+package.name = app
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -36,7 +35,7 @@ version = 1.0
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy,sqlite3,futures,requests,openssl,hostpython2
+requirements = kivy,sqlite3,futures,requests,openssl,hostpython2,git+https://github.com/kivy/plyer.git,android
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -72,7 +71,7 @@ orientation = all
 fullscreen = 1
 
 # (list) Permissions
-#android.permissions = INTERNET,ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION
+android.permissions = INTERNET, ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION
 
 # (int) Android API to use
 #android.api = 19
