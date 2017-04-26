@@ -209,21 +209,21 @@ MyScreenManager:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                size_hint: .5, None
-                                halign: "center"
+                                pos: 200, 100
+                                align: "center"
                                 on_ref_press:
                                     import webbrowser
-                                    webbrowser.open("http://www.oulu.fi/university/")   
+                                    webbrowser.open("http://www.oulu.fi/tellusarena/")   
                             
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                size_hint: .5,.3
-                                halign: "center"
+                                pos: 200, 15
+                                align: "center"
                                 on_ref_press:
                                     import webbrowser                                
-                                    webbrowser.open("http://www.oulu.fi/university/")
+                                    webbrowser.open("http://www.oulu.fi/tellusarena-fi/")
                         
                         Button:
                             text: 'Play'
@@ -249,18 +249,25 @@ MyScreenManager:
                             markup: True
                             halign: "center"
                         
-                        Label:
-                            
-                            text: '[ref=http://www.oulu.fi/university/]More Info in English[/ref]'
-                            text_size: None, None
-                            size_hint_y: None
-                            pos_hint:{'center_x':0.5, 'y': 0.20}
-                            size: (50, 44)
-                            color: 0,0,1,1
-                            markup: True
-                            on_ref_press:
-                                import webbrowser
-                                webbrowser.open(args[1])
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/university/node/34985")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/yliopisto/opiskelijakeskus")
                         
                         Button:
                             text: 'Play'
@@ -285,6 +292,26 @@ MyScreenManager:
                             text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oyy.fi/en/")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oyy.fi/")
                         
                         Button:
                             text: 'Play'
@@ -308,6 +335,26 @@ MyScreenManager:
                             text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
                             markup: True
                             halign: "left"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/library/")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/kirjasto/")
                         
                         Button:
                             text: 'Play'
@@ -333,7 +380,17 @@ MyScreenManager:
                             text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
                             markup: True
                             halign: "center"
-                        
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/fablab/")   
+                            
                         Button:
                             text: 'Play'
                             size_hint: 0.4, 0.25
@@ -356,6 +413,36 @@ MyScreenManager:
                             text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 200
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/itee/node/6413")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/tst/node/24248")
+                                    
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/itee/node/44049")
                         
                         Button:
                             text: 'Play'
@@ -380,6 +467,26 @@ MyScreenManager:
                             text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/oulubusinessschool/studying")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/kauppakorkeakoulu/opiskelu")
                         
                         Button:
                             text: 'Play'
@@ -403,6 +510,26 @@ MyScreenManager:
                             text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/biodiversityunit/node/16772")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/biodiversiteettiyksikko/node/1372")
                         
                         Button:
                             text: 'Play'
@@ -427,6 +554,26 @@ MyScreenManager:
                             text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/edu/admissions")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/ktk/opiskelijavalinta")
                         
                         Button:
                             text: 'Play'
@@ -450,6 +597,26 @@ MyScreenManager:
                             markup: True
                             halign: "center"
                             
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/edu/admissions")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/ktk/opiskelijavalinta")
+                            
                         
                         Button:
                             text: 'Play'
@@ -472,6 +639,27 @@ MyScreenManager:
                             text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
                             markup: True
                             halign: "center"
+                            
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/tech/node/6412")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/ttk/hae")
                         
                         Button:
                             text: 'Play'
@@ -495,6 +683,26 @@ MyScreenManager:
                             markup: True
                             halign: "center"
                             
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/university/")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/university/")
+                            
                         Button:
                             text: 'Play'
                             size_hint: 0.4, 0.25
@@ -514,6 +722,26 @@ MyScreenManager:
                         Label:
                             text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/university/")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/university/")
                         
                         Button:
                             text: 'Play'
@@ -537,6 +765,26 @@ MyScreenManager:
                             text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
                             markup: True
                             halign: "center"
+                            
+                            Label:
+                                text: '[ref=] More Info in English [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 100
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser
+                                    webbrowser.open("http://www.oulu.fi/university/")   
+                                
+                            Label:
+                                text: '[ref=] More Info In Finnish [/ref]'
+                                markup: True
+                                color: 0,0,1,1
+                                pos: 200, 15
+                                align: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/university/")
                         
                         Button:
                             text: 'Play'
