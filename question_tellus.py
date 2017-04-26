@@ -21,7 +21,7 @@ Builder.load_string('''
     BoxLayout:
         orientation: "vertical"
         CustLabel:
-            text: "Which event was held to celebrates international \\n cultures and cooperation in Tellus innovation area on \\n April 3rd,2017?  "
+            text: "Which international cultures and cooperation event is celebrated by Tellus innovation arena?  "
             color: 0, 0, 0, 1
         CheckBox:
             group: "fav_color"
