@@ -11,48 +11,40 @@ from kivy.lang import Builder
 
 Builder.load_string('''
 
-#: import CheckBox kivy.uix.checkbox
 
-<CustLabel@Label>:
-    color: 0, 0, 0, 1
-
-<QuestionAnswerTellus>:
-    
-    BoxLayout:
+<QuestionAnswerTellus>:    
+    name: 'ToggleButton'
+    GridLayout:
         orientation: "vertical"
-        CustLabel:
-            text: "Which international cultures and cooperation event is celebrated by Tellus innovation arena?  "
-            color: 0, 0, 0, 1
-        CheckBox:
-            group: "fav_color"
-            value: root.blue
-        CustLabel:
-            text: "International avenue"
-            color: 0, 0, 0, 1
-        CheckBox:
-            group: "fav_color"
-            value: root.blue
-        CustLabel:
-            text: " Polar bear pitching"
-            color: 0, 0, 0, 1
-        CheckBox:
-            group: "fav_color"
-            value: root.blue
-        CustLabel:
-            text: " International food festival"
-            color: 0, 0, 0, 1
-        CheckBox:
-            group: "fav_color"
-            value: root.blue
-        CustLabel:
-            text: " Start-up week"
-            color: 0, 0, 0, 1   
-                   
-            
-            
-
+        cols: 1
+        rows: 8
+        spacing: '45dp'
+        size_hint_y: None
+        height: self.minimum_height
+        Label:
+            text: 'Which international cultures and cooperation event is celebrated by Tellus \\ninnovation arena?'
+            font_size: 38
+        ToggleButton:
+            size_hint_y: None
+            height: '48dp'
+            text: 'International avenue'
+            group: 'g1'
+        ToggleButton:
+            size_hint_y: None
+            height: '48dp'
+            text: 'Polar bear pitching'
+            group: 'g1'
+        ToggleButton:
+            size_hint_y: None
+            height: '48dp'
+            text: 'International food festival'
+            group: 'g1'
+        ToggleButton:
+            size_hint_y: None
+            height: '48dp'
+            text: 'Start-up week'
+            group: 'g1'
      ''')
-
 
 # Used to display popup
 #class ResultPopup(Popup):
