@@ -1,1 +1,2 @@
 futures
+git+https://github.com/kivy/plyer.git

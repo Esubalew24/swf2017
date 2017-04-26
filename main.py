@@ -26,7 +26,6 @@ from question_psoas import QuestionAnswerPsoas
 
 from minigame3.main import TicTacToe
 from drawing import Painter
-
 class CustomPopup(Popup):
     pass
 
@@ -99,7 +98,7 @@ class CongratulationScreen(Screen):
 class MyScreenManager(ScreenManager):
     pass
 
-root_widget = Builder.load_string('''
+kv = '''
 
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
 MyScreenManager:
@@ -178,366 +177,375 @@ MyScreenManager:
     name: 'third'
     BoxLayout:
         orientation: 'vertical'
-        RelativeLayout:
-            MapView:
-                lat: 65.0593
-                lon: 25.4663
-                zoom: 17
-                
-                
-               
-                MapMarkerPopup:
-                    name: 'Tellus'
-                    lat: 65.058824
-                    lon: 25.467081
-                    popup_size: dp(380), dp(250)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Tellus.png"
-                                mipmap: True
+        MapView:
+            lat: 65.0593
+            lon: 25.4663
+            zoom: 17
+
+            MapMarker:
+                lat: app.app_lat
+                lon: app.app_lon
+                source: 'character.png'
+
+            MapMarkerPopup:
+                name: 'Tellus'
+                lat: 65.058824
+                lon: 25.467081
+                popup_size: dp(380), dp(250)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Tellus.png"
+                            mipmap: True
+                        Label:
+                            
+                            text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
+                            markup: True
+                            halign: "center"
+                        
                             Label:
-                                
-                                text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
+                                text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                halign: "center"
-                            
-                                Label:
-                                    text: '[ref=http://www.oulu.fi/university/] More Info Here [/ref]'
-                                    markup: True
-                                    color: 0,0,1,1
-                                    halign: "center"
-                                    on_ref_press:
-                                        import webbrowser
-                                        webbrowser.open(args[1])    
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_tellus'
-                                
-                                
-                MapMarkerPopup:
-                    name: 'Student_Center'
-                    lat: 65.059813
-                    lon: 25.465233
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "student_center.png"
-                                mipmap: True
-                            Label:
-                                text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
-                                markup: True
-                                halign: "center"
-                            
-                            Label:
-                                
-                                text: '[ref=http://www.oulu.fi/university/]More Info in English[/ref]'
-                                text_size: None, None
-                                size_hint_y: None
-                                pos_hint:{'center_x':0.5, 'y': 0.20}
-                                size: (50, 44)
                                 color: 0,0,1,1
-                                markup: True
+                                size_hint: .5, None
+                                halign: "center"
                                 on_ref_press:
                                     import webbrowser
-                                    webbrowser.open(args[1])
-                                    
-                    
+                                    webbrowser.open("http://www.oulu.fi/university/")   
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_student_center'
-                
-                
-                MapMarkerPopup:
-                    name: 'oyy'
-                    lat: 65.059053
-                    lon: 25.46596
-                    popup_size: dp(400), dp(250)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "OYY.png"
-                                mipmap: True
                             Label:
-                                text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
+                                text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
+                                color: 0,0,1,1
+                                size_hint: .5,.3
                                 halign: "center"
+                                on_ref_press:
+                                    import webbrowser                                
+                                    webbrowser.open("http://www.oulu.fi/university/")
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_tellus'
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_oyy'   
-                
-                MapMarkerPopup:
-                    name: 'Library'
-                    lat: 65.061484
-                    lon: 25.466539
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Library.png"
-                                mipmap: True
-                            Label:
-                                text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
-                                markup: True
-                                halign: "left"
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                
-                                font_size: 30
-                                on_release: app.root.current = 'question_library'
-                
-                
-                MapMarkerPopup:
-                    name: 'Fab_Lab'
-                    lat: 65.058953
-                    lon: 25.466985
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "fab lab.png"
-                               
-                            Label:
-                                text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
-                                markup: True
-                                halign: "center"
+            MapMarkerPopup:
+                name: 'Student_Center'
+                lat: 65.059813
+                lon: 25.465233
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "student_center.png"
+                            mipmap: True
+                        Label:
+                            text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
+                            markup: True
+                            halign: "center"
+                        
+                        Label:
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_fablab'                
-                
-                MapMarkerPopup:
-                    name: 'Faculty of ITEE'
-                    lat: 65.057949
-                    lon: 25.468455
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Faculty of ITEE.png"
-                               
-                            Label:
-                                text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
-                                markup: True
-                                halign: "center"
+                            text: '[ref=http://www.oulu.fi/university/]More Info in English[/ref]'
+                            text_size: None, None
+                            size_hint_y: None
+                            pos_hint:{'center_x':0.5, 'y': 0.20}
+                            size: (50, 44)
+                            color: 0,0,1,1
+                            markup: True
+                            on_ref_press:
+                                import webbrowser
+                                webbrowser.open(args[1])
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_student_center'
+            
+            
+            MapMarkerPopup:
+                name: 'oyy'
+                lat: 65.059053
+                lon: 25.46596
+                popup_size: dp(400), dp(250)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "OYY.png"
+                            mipmap: True
+                        Label:
+                            text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_oyy'   
+            
+            MapMarkerPopup:
+                name: 'Library'
+                lat: 65.061484
+                lon: 25.466539
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Library.png"
+                            mipmap: True
+                        Label:
+                            text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
+                            markup: True
+                            halign: "left"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_oyy'                    
-                
-                
-                MapMarkerPopup:
-                    name: 'Zoological_Museum'
-                    lat: 65.060597
-                    lon: 25.466931
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "zoological_museum.png"
-                               
-                            Label:
-                                text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
-                                markup: True
-                                halign: "center"
+                            font_size: 30
+                            on_release: app.root.current = 'question_library'
+            
+            
+            MapMarkerPopup:
+                name: 'Fab_Lab'
+                lat: 65.058953
+                lon: 25.466985
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "fab lab.png"
+                           
+                        Label:
+                            text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_fablab'                
+            
+            MapMarkerPopup:
+                name: 'Faculty of ITEE'
+                lat: 65.057949
+                lon: 25.468455
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Faculty of ITEE.png"
+                           
+                        Label:
+                            text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_oyy'                    
+            
+            
+            MapMarkerPopup:
+                name: 'Zoological_Museum'
+                lat: 65.060597
+                lon: 25.466931
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "zoological_museum.png"
+                           
+                        Label:
+                            text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_oyy'            
+            
+            MapMarkerPopup:
+                name: 'Balance'
+                lat: 65.061035
+                lon: 25.468079
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "faculty of humanities.jpg"
+                           
+                        Label:
+                            text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_balance'
+            
+            
+            
+            MapMarkerPopup:
+                name: 'Saalasti Hall'
+                lat: 65.056928
+                lon: 25.468709
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Salastti_hall.png"
+                        Label:
+                            text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_saalasti_hall'
+            
+            MapMarkerPopup:
+                name: 'KTK112'
+                lat: 65.061765
+                lon: 25.469892
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Faculty of education.png"
+                        Label:
+                            text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
+                            markup: True
+                            halign: "center"
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_oyy'            
-                
-                MapMarkerPopup:
-                    name: 'Balance'
-                    lat: 65.061035
-                    lon: 25.468079
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "faculty of humanities.jpg"
-                               
-                            Label:
-                                text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
-                                markup: True
-                                halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_faculity_of_education'    
+                        
+            MapMarkerPopup:
+                name: 'Stories'
+                lat: 65.058493
+                lon: 25.466995
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Faculty of technology and story.png"
+                        Label:
+                            text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_stories'
+                        
+            MapMarkerPopup:
+                name: 'L6'
+                lat: 65.059941
+                lon: 25.466303
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "faculty of science.png"
+                        Label:
+                            text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
+                            markup: True
+                            halign: "center"
                             
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_balance'
-                
-                
-                
-                MapMarkerPopup:
-                    name: 'Saalasti Hall'
-                    lat: 65.056928
-                    lon: 25.468709
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Salastti_hall.png"
-                            Label:
-                                text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
-                                markup: True
-                                halign: "center"
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_saalasti_hall'
-                
-                MapMarkerPopup:
-                    name: 'KTK112'
-                    lat: 65.061765
-                    lon: 25.469892
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Faculty of education.png"
-                            Label:
-                                text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
-                                markup: True
-                                halign: "center"
-                                
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_faculity_of_education'    
-                            
-                MapMarkerPopup:
-                    name: 'Stories'
-                    lat: 65.058493
-                    lon: 25.466995
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Faculty of technology and story.png"
-                            Label:
-                                text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
-                                markup: True
-                                halign: "center"
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_stories'
-                            
-                MapMarkerPopup:
-                    name: 'L6'
-                    lat: 65.059941
-                    lon: 25.466303
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "faculty of science.png"
-                            Label:
-                                text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
-                                markup: True
-                                halign: "center"
-                                
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_faculity_of_science'
-                MapMarkerPopup:
-                    name: 'Aava'
-                    lat:  65.060479
-                    lon:  25.46656
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "aava and restaurant.png"
-                            Label:
-                                text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
-                                halign: "center"
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_aava'
-                
-                MapMarkerPopup:
-                    name: 'PSOAS'
-                    lat: 65.05733
-                    lon: 25.467344
-                    popup_size: dp(430), dp(280)
-                    Bubble:
-                        BoxLayout:
-                            orientation: "horizontal"
-                            padding: "5dp"
-                            AsyncImage:
-                                source: "Psoas.png"
-                               
-                            Label:
-                                text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
-                                markup: True
-                                halign: "center"
-                            
-                            Button:
-                                text: 'Play'
-                                size_hint: 0.4, 0.25
-                                font_size: 30
-                                on_release: app.root.current = 'question_psoas'
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_faculity_of_science'
+            MapMarkerPopup:
+                name: 'Aava'
+                lat:  65.060479
+                lon:  25.46656
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "aava and restaurant.png"
+                        Label:
+                            text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_aava'
+            
+            MapMarkerPopup:
+                name: 'PSOAS'
+                lat: 65.05733
+                lon: 25.467344
+                popup_size: dp(430), dp(280)
+                Bubble:
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: "5dp"
+                        AsyncImage:
+                            source: "Psoas.png"
+                           
+                        Label:
+                            text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
+                            markup: True
+                            halign: "center"
+                        
+                        Button:
+                            text: 'Play'
+                            size_hint: 0.4, 0.25
+                            font_size: 30
+                            on_release: app.root.current = 'question_psoas'
 
-                MapMarker:
-                    lat: app.app_lat
-                    lon: app.app_lon
-        
+            
+
 <Game>:
     name:'game'
     BoxLayout:
@@ -790,12 +798,9 @@ MyScreenManager:
             size_hint: 1, None
             font_size: 30
             on_release: app.root.current = 'third'
-
-''')
+'''
 
 class ScreenManagerApp(App):
-    def build(self):
-        return root_widget
 
     app_lat = NumericProperty(0)
     app_lon = NumericProperty(0)
@@ -821,6 +826,8 @@ class ScreenManagerApp(App):
 
     @mainthread
     def on_location(self, **kwargs):
+        self.gps_location = '\n'.join([
+            '{}={}'.format(k, v) for k, v in kwargs.items()])
         self.app_lat = kwargs.get('lat')
         self.app_lon = kwargs.get('lon')
 
@@ -836,4 +843,5 @@ class ScreenManagerApp(App):
         gps.start(1000, 0)
         pass
 
-ScreenManagerApp().run()
+if __name__ == '__main__':
+    ScreenManagerApp().run()

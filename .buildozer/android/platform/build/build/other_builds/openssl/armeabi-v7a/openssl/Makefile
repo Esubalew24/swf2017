@@ -59,7 +59,7 @@ OPENSSLDIR=/usr/local/ssl
 # equal 4.
 # PKCS1_CHECK - pkcs1 tests.
 
-CC= arm-linux-androideabi-gcc -DANDROID -mandroid -fomit-frame-pointer --sysroot /Users/Esubalew/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm -lm -L/Users/Esubalew/Desktop/swf2017/.buildozer/android/platform/build/build/libs_collections/oulu/armeabi-v7a
+CC= arm-linux-androideabi-gcc -DANDROID -mandroid -fomit-frame-pointer --sysroot /Users/Esubalew/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm -lm -L/Users/Esubalew/Desktop/swf2017/.buildozer/android/platform/build/build/libs_collections/app/armeabi-v7a
 CFLAG= -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -march=armv7-a -mandroid -I$(ANDROID_DEV)/include -B$(ANDROID_DEV)/lib -O3 -fomit-frame-pointer -Wall -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DBSAES_ASM -DGHASH_ASM
 DEPFLAG= -DOPENSSL_NO_EC_NISTP_64_GCC_128 -DOPENSSL_NO_GMP -DOPENSSL_NO_JPAKE -DOPENSSL_NO_LIBUNBOUND -DOPENSSL_NO_MD2 -DOPENSSL_NO_RC5 -DOPENSSL_NO_RFC3779 -DOPENSSL_NO_SCTP -DOPENSSL_NO_SSL_TRACE -DOPENSSL_NO_SSL2 -DOPENSSL_NO_STORE -DOPENSSL_NO_UNIT_TEST -DOPENSSL_NO_WEAK_SSL_CIPHERS
 PEX_LIBS= 
