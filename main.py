@@ -1,4 +1,8 @@
 from kivy.app import App
+from plyer import gps
+from kivy.properties import StringProperty
+from kivy.properties import NumericProperty
+from kivy.clock import Clock, mainthread
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
 from kivy.garden.mapview import MapView, MapMarker
@@ -529,6 +533,10 @@ MyScreenManager:
                                 size_hint: 0.4, 0.25
                                 font_size: 30
                                 on_release: app.root.current = 'question_psoas'
+
+                MapMarker:
+                    lat: app.app_lat
+                    lon: app.app_lon
         
 <Game>:
     name:'game'
@@ -788,5 +796,44 @@ MyScreenManager:
 class ScreenManagerApp(App):
     def build(self):
         return root_widget
+
+    app_lat = NumericProperty(0)
+    app_lon = NumericProperty(0)
+    gps_location = StringProperty()
+    gps_status = StringProperty('Click Start to get GPS location updates')
+
+    def build(self):
+        try:
+            gps.configure(on_location=self.on_location,
+                          on_status=self.on_status)
+        except NotImplementedError:
+            import traceback
+            traceback.print_exc()
+            self.gps_status = 'NO GPS'
+
+        return Builder.load_string(kv)
+
+    def start(self, minTime, minDistance):
+        gps.start(minTime, minDistance)
+
+    def stop(self):
+        gps.stop()
+
+    @mainthread
+    def on_location(self, **kwargs):
+        self.app_lat = kwargs.get('lat')
+        self.app_lon = kwargs.get('lon')
+
+    @mainthread
+    def on_status(self, stype, status):
+        self.gps_status = 'type={}\n{}'.format(stype, status)
+
+    def on_pause(self):
+        gps.stop()
+        return True
+
+    def on_resume(self):
+        gps.start(1000, 0)
+        pass
 
 ScreenManagerApp().run()
