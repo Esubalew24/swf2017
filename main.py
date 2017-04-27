@@ -203,7 +203,7 @@ MyScreenManager:
                             
                             text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
                             markup: True
-                            halign: "center"
+                            align: "center"
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -247,7 +247,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
                             markup: True
-                            halign: "center"
+                            align: "center"
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -291,7 +291,7 @@ MyScreenManager:
                         Label:
                             text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -334,7 +334,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
                             markup: True
-                            halign: "left"
+                            align: "left"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -379,7 +379,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -466,7 +466,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -509,7 +509,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -553,7 +553,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -595,7 +595,7 @@ MyScreenManager:
                         Label:
                             text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -638,7 +638,7 @@ MyScreenManager:
                         Label:
                             text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             
                             Label:
@@ -681,7 +681,7 @@ MyScreenManager:
                         Label:
                             text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -721,7 +721,7 @@ MyScreenManager:
                             source: "aava and restaurant.png"
                         Label:
                             text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -764,7 +764,7 @@ MyScreenManager:
                         Label:
                             text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
