@@ -22,8 +22,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Which international cultures and cooperation event is celebrated by Tellus \\ninnovation arena?'
-            font_size: 38
+            text: 'Which international cultures and cooperation \\nevent is celebrated by Tellus innovation arena?'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

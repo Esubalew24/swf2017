@@ -21,8 +21,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Student Center provides comprehensive services for students. They provide \\nthese services except:'
-            font_size: 38
+            text: 'Student Center provides comprehensive services \\n for students. They provide these services except:'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

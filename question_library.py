@@ -21,8 +21,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Oulu university library collects different resources except:'
-            font_size: 38
+            text: 'Oulu university library collects different\\n resources except:'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

@@ -22,8 +22,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'How many restaurants are there in Linnanmaa campus?'
-            font_size: 38
+            text: 'How many restaurants are there in \\nLinnanmaa campus?'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

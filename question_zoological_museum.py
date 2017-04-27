@@ -22,8 +22,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Oulu Business School is accredited by which International accreditation \\nbody for business schools worldwide?'
-            font_size: 38
+            text: 'Oulu Business School is accredited by which \\nInternational accreditation body for business \\nschools worldwide?'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

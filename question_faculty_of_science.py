@@ -22,8 +22,8 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'The Faculty of Science is the ___ biggest educational unit in Sciences in Finland.'
-            font_size: 38
+            text: 'The Faculty of Science is the ___ biggest \\neducational unit in Sciences in Finland.'
+            font_size: '15sp'
         ToggleButton:
             size_hint_y: None
             height: '48dp'
