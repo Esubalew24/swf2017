@@ -412,7 +412,7 @@ MyScreenManager:
                         Label:
                             text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
                             markup: True
-                            halign: "center"
+                            align: "center"
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -448,7 +448,7 @@ MyScreenManager:
                             text: 'Play'
                             size_hint: 0.4, 0.25
                             font_size: 30
-                            on_release: app.root.current = 'question_oyy'                    
+                            on_release: app.root.current = 'question_datagarage'                    
             
             
             MapMarkerPopup:
@@ -492,7 +492,7 @@ MyScreenManager:
                             text: 'Play'
                             size_hint: 0.4, 0.25
                             font_size: 30
-                            on_release: app.root.current = 'question_oyy'            
+                            on_release: app.root.current = 'question_zoological_museum'            
             
             MapMarkerPopup:
                 name: 'Balance'

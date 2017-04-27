@@ -21,7 +21,7 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Student Center provides comprehensive services for students starting with \\nregistration to the university and going all the way to alumni services. \\nThey provide these services except:'
+            text: 'Student Center provides comprehensive services for students. They provide \\nthese services except:'
             font_size: 38
         ToggleButton:
             size_hint_y: None
