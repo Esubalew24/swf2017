@@ -537,8 +537,7 @@ MyScreenManager:
                             font_size: 30
                             on_release: app.root.current = 'question_balance'
             
-            
-            
+                        
             MapMarkerPopup:
                 name: 'Saalasti Hall'
                 lat: 65.056928
