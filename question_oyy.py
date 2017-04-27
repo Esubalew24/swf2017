@@ -20,7 +20,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'All students can become members of the University Student union OYY and they can get these benefits except:'
-            font_size: 38
+            text_size: 38
             text_size: self.size
             halign: 'left'
             valign:'middle'

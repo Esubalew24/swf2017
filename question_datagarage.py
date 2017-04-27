@@ -23,7 +23,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'The first 5G test network in Finland is cast up in:'
-            font_size: 38
+            text_size: 38
             text_size: self.size
             halign: 'left'
             valign:'middle'

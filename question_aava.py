@@ -23,7 +23,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'How many restaurants are there in Linnanmaa campus?'
-            font_size: 38
+            text_size: 38
             text_size: self.size
             halign: 'left'
             valign:'middle'

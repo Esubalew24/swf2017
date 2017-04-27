@@ -23,7 +23,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Faculty of Humanities  possesses a definite character of its own, two subjects having the only professorial chair in Finland. One of them is:'
-            font_size: 38
+            text_size: 38
             text_size: self.size
             halign: 'left'
             valign:'middle'
