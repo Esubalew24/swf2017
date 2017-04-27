@@ -19,8 +19,11 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'All students can become members of the \\nUniversity Student union OYY and they can get \\n these benefits except:'
-            font_size: '15sp'
+            text: 'All students can become members of the University Student union OYY and they can get these benefits except:'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

@@ -23,7 +23,10 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Fab Lab Oulu is the ___ fab lab existing in Finland.'
-            font_size: '15sp'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

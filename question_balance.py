@@ -22,8 +22,11 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Faculty of Humanities  possesses a definite \\n character of its own, two subjects having the only \\n professorial chair in Finland. One of them is:'
-            font_size: '15sp'
+            text: 'Faculty of Humanities  possesses a definite character of its own, two subjects having the only professorial chair in Finland. One of them is:'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

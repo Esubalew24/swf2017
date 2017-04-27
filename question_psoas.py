@@ -23,7 +23,10 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Who is not eligible to apply for Psoas apartments?'
-            font_size: '15sp'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

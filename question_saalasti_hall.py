@@ -22,8 +22,11 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'The graduation ceremony at the University \\nof Oulu is held at:'
-            font_size: '15sp'
+            text: 'The graduation ceremony at the University of Oulu is held at:'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'

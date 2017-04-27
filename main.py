@@ -196,21 +196,25 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Tellus.png"
                             mipmap: True
                         Label:
                             
-                            text: "[b]Tellus Innovation Arena[/b]\\n Tellus Innovation Arena \\n is a brand new, inspiring \\n open space for learning, \\n collaboration and \\n entrepreneurship at the Uni."
+                            text: "[b]Tellus Innovation Arena[/b]\\nTellus Innovation Arena is a brand new, inspiring open space for learning, collaboration and entrepreneurship at the Uni."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
+                            
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 100
-                                align: "center"
+                                
+                                valign: 'middle'
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oulu.fi/tellusarena/")   
@@ -219,8 +223,7 @@ MyScreenManager:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 15
-                                align: "center"
+                                
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/tellusarena-fi/")
@@ -241,20 +244,23 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "student_center.png"
                             mipmap: True
                         Label:
-                            text: "[b]Student Center[/b] \\n Student Center provides comprehensive \\n services for students starting with \\n registration to the university and going  \\n all the way to alumni services."
+                            text: "[b]Student Center[/b] \\nStudent Center provides comprehensive services for students starting with registration to the university and going  all the way to alumni services."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 100
-                                align: "center"
+                                text_size: self.size
+                                halign:'right'
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oulu.fi/university/node/34985")   
@@ -263,8 +269,8 @@ MyScreenManager:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 15
-                                align: "center"
+                                text_size: self.size
+                                halign:'right'
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/yliopisto/opiskelijakeskus")
@@ -285,20 +291,23 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "OYY.png"
                             mipmap: True
                         Label:
-                            text: "[b]OYY[/b]\\n OYY supervises the interests of its \\n members at the University, in the City \\n of Oulu and at the national level."
+                            text: "[b]OYY[/b]\\nOYY supervises the interests of its members at the University, in the City of Oulu and at the national level."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 100
-                                align: "center"
+                                text_size: self.size
+                                halign:'right'
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oyy.fi/en/")   
@@ -307,8 +316,8 @@ MyScreenManager:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
                                 color: 0,0,1,1
-                                pos: 200, 15
-                                align: "center"
+                                text_size: self.size
+                                halign:'right'
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oyy.fi/")
@@ -328,13 +337,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Library.png"
                             mipmap: True
                         Label:
-                            text: "[b]Library[/b] \\n Oulu University Library is a \\n scientific library, the task of \\n which is to provide library \\n and information services for the \\n researchers, teachers and students \\n of the University of Oulu."
+                            text: "[b]Library[/b] \\nOulu University Library is a scientific library, the task of which is to provide library and information services for the researchers, teachers and students of the University of Oulu."
                             markup: True
-                            align: "left"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -373,13 +385,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "fab lab.png"
                            
                         Label:
-                            text: "[b]Fab_Lab[/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                            text: "[b]Fab_Lab[/b]\\nFab Lab Oulu is a small digital manufacturing working area (fabrication laboratory)  that complies with open innovation concept developed by MIT in the United States."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -406,13 +421,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Faculty of ITEE.png"
                            
                         Label:
-                            text: "[b]Faculty of ITEE[/b]\\n The mission of the ITEE faculty is to \\n advance internationally top-level \\n research on information technology \\n and education based on it and  \\n generate new knowledge of information \\n technology and apply it to the needs \\n of the society, people and industries."
+                            text: "[b]Faculty of ITEE[/b]\\nThe mission of the ITEE faculty is to  advance internationally top-level  research on information technology and education based on it and  generate new knowledge of information technology and apply it to the needs of the society, people and industries."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -460,13 +478,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "zoological_museum.png"
                            
                         Label:
-                            text: "[b]Zoological Museum & Oulu Business School [/b]\\n Fab Lab Oulu is a small digital \\n manufacturing working area (fabrication laboratory)  \\n that complies with open innovation \\n concept developed by MIT in the United States."
+                            text: "[b]Zoological Museum & Oulu Business School [/b]\\nFab Lab Oulu is a small digital manufacturing working area (fabrication laboratory)  that complies with open innovation concept developed by MIT in the United States."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -503,13 +524,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "faculty of humanities.jpg"
                            
                         Label:
-                            text: "[b]Faculty of Humanities[/b]\\n The Faculty of Humanities provided \\n teaching and research in practically \\n all the academic disciplines concerned \\n with achievements in the humanities: \\n history, language and linguistics, \\n cultural studies and literature."
+                            text: "[b]Faculty of Humanities[/b]\\nThe Faculty of Humanities provided teaching and research in practically all the academic disciplines concerned with achievements in the humanities: history, language and linguistics, cultural studies and literature."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -547,12 +571,15 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Salastti_hall.png"
                         Label:
-                            text: "[b]Saalasti Hall[/b] is the place\\nwhich graduation ceremonies\\nare held every month"
+                            text: "[b]Saalasti Hall[/b]is the place which graduation ceremonies are held every month"
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -589,12 +616,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Faculty of education.png"
                         Label:
-                            text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert\\norganisation for training,\\nresearch and development\\nin the field of education\\naand teaching."
+                            text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert organisation for training, research and development in the field of education and teaching."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
+                            
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -632,12 +663,15 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Faculty of technology and story.png"
                         Label:
-                            text: "[b]The Faculty of Technology[/b]\\noperates in the field of\\nMechanical Engineering\\nEnvironmental Engineering\\nand Industrial Engineering\\nand Management."
+                            text: "[b]The Faculty of Technology[/b]\\noperates in the field of Mechanical Engineering Environmental Engineering and Industrial Engineering and Management."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             
                             Label:
@@ -675,12 +709,15 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "faculty of science.png"
                         Label:
-                            text: "[b]The Faculty of Science[/b]\\nis the second biggest\\neducational unit\\nin Sciences in Finland"
+                            text: "[b]The Faculty of Science[/b]\\nis the second biggest educational unit in Sciences in Finland"
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -716,11 +753,15 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "aava and restaurant.png"
                         Label:
-                            text: " Restaurant \\n Student prices for\\n the meals are:\\n basic student lunch EUR 2.60\\nsoup lunch EUR 2.25\\ngrill portion EUR 4.95\\nand the special lunch EUR 4.85"
-                            align: "center"
+                            text: "[b] Restaurant [/b]\\nStudent prices for the meals are: basic student lunch EUR 2.60 soup lunch EUR 2.25 grill portion EUR 4.95 and the special lunch EUR 4.85"
+                            markup: True
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
@@ -757,13 +798,16 @@ MyScreenManager:
                     BoxLayout:
                         orientation: "horizontal"
                         padding: "5dp"
+                        spacing: 10
                         AsyncImage:
                             source: "Psoas.png"
                            
                         Label:
-                            text: "[b]PSOAS[/b]\\n The main duty of PSOAS is \\n to offer inexpensive living \\n quarters to the areas."
+                            text: "[b]PSOAS[/b]\\nThe main duty of PSOAS is to offer inexpensive living quarters to the areas."
                             markup: True
-                            align: "center"
+                            text_size: self.size
+                            halign: 'left'
+                            valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'

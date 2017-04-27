@@ -22,8 +22,11 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-            text: 'Which is not a learning management \\nsystem tool used by the University of \\nOulu?'
-            font_size: '15sp'
+            text: 'Which is not a learning management system tool used by the University of Oulu?'
+            font_size: 38
+            text_size: self.size
+            halign: 'left'
+            valign:'middle'
         ToggleButton:
             size_hint_y: None
             height: '48dp'
