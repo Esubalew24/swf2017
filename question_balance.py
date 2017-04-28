@@ -22,8 +22,13 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
+<<<<<<< HEAD
             text: 'Faculty of Humanities  possesses a definite \\ncharacter of its own, two subjects having \\nthe only professorial chair in Finland. \\nOne of them is:'
             font_size: '15sp'
+=======
+            text: 'Faculty of Humanities  possesses a definite character of its own, two subjects having the only professorial chair in Finland. One of them is:'
+            text_size: 38
+>>>>>>> origin/master
             text_size: self.size
             halign: 'left'
             valign:'middle'

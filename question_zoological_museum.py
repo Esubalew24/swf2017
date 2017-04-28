@@ -23,7 +23,11 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Oulu Business School is accredited by which International accreditation body for business schools worldwide?'
+<<<<<<< HEAD
             font_size: '15sp'
+=======
+            text_size: 38
+>>>>>>> origin/master
             text_size: self.size
             halign: 'left'
             valign:'middle'

@@ -260,7 +260,7 @@ MyScreenManager:
                                 markup: True
                                 color: 0,0,1,1
                                 text_size: self.size
-                                halign:'right'
+                                
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oulu.fi/university/node/34985")   
@@ -270,7 +270,7 @@ MyScreenManager:
                                 markup: True
                                 color: 0,0,1,1
                                 text_size: self.size
-                                halign:'right'
+                                
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/yliopisto/opiskelijakeskus")
