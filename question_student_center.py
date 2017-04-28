@@ -22,7 +22,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Student Center provides comprehensive services for students. They provide these services except:'
-            font_size: 38
+            font_size: '15sp'
             text_size: self.size
             halign: 'left'
             valign:'middle'

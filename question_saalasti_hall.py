@@ -23,7 +23,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'The graduation ceremony at the University of Oulu is held at:'
-            font_size: 38
+            font_size: '15sp'
             text_size: self.size
             halign: 'left'
             valign:'middle'

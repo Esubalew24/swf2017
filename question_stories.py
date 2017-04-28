@@ -23,7 +23,7 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Faculty of Technology focuses on science with:'
-            font_size: 38
+            font_size: '15sp'
             text_size: self.size
             halign: 'left'
             valign:'middle'
