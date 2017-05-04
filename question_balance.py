@@ -12,6 +12,30 @@ from kivy.lang import Builder
 Builder.load_string('''
 
 
+<ResultPopupBalance>:
+    id: popup
+    title: 'Result'
+    auto_dismiss: False
+    size_hint: .70, .35
+    BoxLayout:
+        id: contentbox
+        orientation: "vertical"
+        Label:
+            id: content_text
+            
+            height: self.texture_size[1]
+            text: "Your Answer is Correct"
+            text_size: None, None
+            line_height: 1.5
+            valign: "middle"
+                
+        Button:
+            text: "Close"
+            size_hint_y: None
+            height: "40dp"
+            on_press: root.dismiss()
+
+
 <QuestionAnswerBalance>:
     name: 'ToggleButton'
     GridLayout:
@@ -29,22 +53,23 @@ Builder.load_string('''
             text_size: self.size
             halign: 'left'
             valign:'middle'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'The History of Science and Ideas'
             group: 'g1'
-        ToggleButton:
+            on_press: root.open_popup()
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Language and linguistics'
             group: 'g1'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Finnish culture studies'
             group: 'g1'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Gender study'
@@ -52,9 +77,8 @@ Builder.load_string('''
      ''')
 
 
-# Used to display popup
-#class ResultPopup(Popup):
- #   pass
+class ResultPopupBalance(Popup):
+    pass
 
 
 class QuestionAnswerBalance(BoxLayout):
@@ -72,10 +96,9 @@ class QuestionAnswerBalance(BoxLayout):
     red = ObjectProperty(False)
     green = ObjectProperty(False)
 
-    # Opens Popup when called
-   # def open_popup(self):
-    #    the_popup = ResultPopup()
-     #   the_popup.open()
+    def open_popup(self):
+        the_popup = ResultPopupBalance()
+        the_popup.open()
 
     Window.clearcolor = (0, 0.5, 0.5, 0.5)
 

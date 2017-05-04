@@ -10,11 +10,11 @@ from kivy.lang import Builder
 
 Builder.load_string('''
 
-<CustomPopup>:
+<ResultPopupOyy>:
     id: popup
     title: 'Result'
     auto_dismiss: False
-    size_hint: .5, .5
+    size_hint: .70, .35
     BoxLayout:
         id: contentbox
         orientation: "vertical"
@@ -55,7 +55,6 @@ Builder.load_string('''
             height: '48dp'
             text: 'Diary'
             group: 'g1'
-            on_press: root.open_popup()
             
         Button:
             size_hint_y: None
@@ -67,6 +66,7 @@ Builder.load_string('''
             height: '48dp'
             text: 'Free membership fee'
             group: 'g1'
+            on_press: root.open_popup()
         Button:
             size_hint_y: None
             height: '48dp'
@@ -75,7 +75,7 @@ Builder.load_string('''
      ''')
 
 
-class CustomPopup(Popup):
+class ResultPopupOyy(Popup):
     pass
 
 
@@ -92,8 +92,7 @@ class QuestionAnswerOyy(BoxLayout):
     # Opens Popup when called
 
     def open_popup(self):
-        the_popup = CustomPopup()
-       # the_popup = CustomPopup(title='Test popup',content=Label(text='Hello world'), size_hint=(None, None), size=(400, 400))
+        the_popup = ResultPopupOyy()
         the_popup.open()
 
     Window.clearcolor = (0, 0.5, 0.5, 0.5)

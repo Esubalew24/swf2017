@@ -11,6 +11,28 @@ from kivy.lang import Builder
 
 Builder.load_string('''
 
+<ResultPopupPsoas>:
+    id: popup
+    title: 'Result'
+    auto_dismiss: False
+    size_hint: .70, .35
+    BoxLayout:
+        id: contentbox
+        orientation: "vertical"
+        Label:
+            id: content_text
+            
+            height: self.texture_size[1]
+            text: "Your Answer is Correct"
+            text_size: None, None
+            line_height: 1.5
+            valign: "middle"
+                
+        Button:
+            text: "Close"
+            size_hint_y: None
+            height: "40dp"
+            on_press: root.dismiss()
 
 <QuestionAnswerPsoas>:
     name: 'ToggleButton'
@@ -28,31 +50,32 @@ Builder.load_string('''
             text_size: self.size
             halign: 'left'
             valign:'middle'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Ali (an exchange student)'
             group: 'g1'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Mike (a master degree student)'
             group: 'g1'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Jack (a phd student)'
             group: 'g1'
-        ToggleButton:
+        Button:
             size_hint_y: None
             height: '48dp'
             text: 'Satu (a staff in Fingersoft)'
             group: 'g1'
+            on_press: root.open_popup()
      ''')
 
-# Used to display popup
-#class ResultPopup(Popup):
- #   pass
+
+class ResultPopupPsoas(Popup):
+    pass
 
 
 class QuestionAnswerPsoas(BoxLayout):
@@ -70,10 +93,9 @@ class QuestionAnswerPsoas(BoxLayout):
     red = ObjectProperty(False)
     green = ObjectProperty(False)
 
-    # Opens Popup when called
-   # def open_popup(self):
-    #    the_popup = ResultPopup()
-     #   the_popup.open()
+    def open_popup(self):
+        the_popup = ResultPopupPsoas()
+        the_popup.open()
 
     Window.clearcolor = (0, 0.5, 0.5, 0.5)
 
