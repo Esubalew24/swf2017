@@ -22,11 +22,8 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Oulu university library collects different resources except:'
-<<<<<<< HEAD
             font_size: '15sp'
-=======
             text_size: 38
->>>>>>> origin/master
             text_size: self.size
             halign: 'left'
             valign:'middle'

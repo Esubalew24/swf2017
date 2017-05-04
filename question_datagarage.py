@@ -22,13 +22,10 @@ Builder.load_string('''
         size_hint_y: None
         height: self.minimum_height
         Label:
-<<<<<<< HEAD
             text: 'The first 5G test network in Finland \\nis cast up in:'
             font_size: '15sp'
-=======
             text: 'The first 5G test network in Finland is cast up in:'
             text_size: 38
->>>>>>> origin/master
             text_size: self.size
             halign: 'left'
             valign:'middle'

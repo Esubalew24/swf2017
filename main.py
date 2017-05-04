@@ -26,7 +26,7 @@ from question_psoas import QuestionAnswerPsoas
 
 from minigame3.main import TicTacToe
 from drawing import Painter
-class CustomPopup(Popup):
+class ResultPopup(Popup):
     pass
 
 class Welcome(Screen):
@@ -191,7 +191,7 @@ MyScreenManager:
                 name: 'Tellus'
                 lat: 65.058824
                 lon: 25.467081
-                popup_size: dp(380), dp(250)
+                popup_size: dp(340), dp(250)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -239,7 +239,7 @@ MyScreenManager:
                 name: 'Student_Center'
                 lat: 65.059813
                 lon: 25.465233
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -286,7 +286,7 @@ MyScreenManager:
                 name: 'oyy'
                 lat: 65.059053
                 lon: 25.46596
-                popup_size: dp(400), dp(250)
+                popup_size: dp(340), dp(250)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -332,7 +332,7 @@ MyScreenManager:
                 name: 'Library'
                 lat: 65.061484
                 lon: 25.466539
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -380,7 +380,7 @@ MyScreenManager:
                 name: 'Fab_Lab'
                 lat: 65.058953
                 lon: 25.466985
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -416,7 +416,7 @@ MyScreenManager:
                 name: 'Faculty of ITEE'
                 lat: 65.057949
                 lon: 25.468455
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -473,7 +473,7 @@ MyScreenManager:
                 name: 'Zoological_Museum'
                 lat: 65.060597
                 lon: 25.466931
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -519,7 +519,7 @@ MyScreenManager:
                 name: 'Balance'
                 lat: 65.061035
                 lon: 25.468079
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -566,7 +566,7 @@ MyScreenManager:
                 name: 'Saalasti Hall'
                 lat: 65.056928
                 lon: 25.468709
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -611,7 +611,7 @@ MyScreenManager:
                 name: 'KTK112'
                 lat: 65.061765
                 lon: 25.469892
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -658,7 +658,7 @@ MyScreenManager:
                 name: 'Stories'
                 lat: 65.058493
                 lon: 25.466995
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -704,7 +704,7 @@ MyScreenManager:
                 name: 'L6'
                 lat: 65.059941
                 lon: 25.466303
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -748,7 +748,7 @@ MyScreenManager:
                 name: 'Aava'
                 lat:  65.060479
                 lon:  25.46656
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"
@@ -793,7 +793,7 @@ MyScreenManager:
                 name: 'PSOAS'
                 lat: 65.05733
                 lon: 25.467344
-                popup_size: dp(430), dp(280)
+                popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
                         orientation: "horizontal"

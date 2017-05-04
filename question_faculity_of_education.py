@@ -23,11 +23,8 @@ Builder.load_string('''
         height: self.minimum_height
         Label:
             text: 'Which is not a learning management system tool used by the University of Oulu?'
-<<<<<<< HEAD
             font_size: '15sp'
-=======
             text_size: 38
->>>>>>> origin/master
             text_size: self.size
             halign: 'left'
             valign:'middle'
