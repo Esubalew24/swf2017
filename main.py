@@ -191,6 +191,7 @@ MyScreenManager:
                 name: 'Tellus'
                 lat: 65.058824
                 lon: 25.467081
+                source: 'info.png'
                 popup_size: dp(340), dp(250)
                 Bubble:
                     BoxLayout:
@@ -239,6 +240,7 @@ MyScreenManager:
                 name: 'Student_Center'
                 lat: 65.059813
                 lon: 25.465233
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -286,6 +288,7 @@ MyScreenManager:
                 name: 'oyy'
                 lat: 65.059053
                 lon: 25.46596
+                source: 'info.png'
                 popup_size: dp(340), dp(250)
                 Bubble:
                     BoxLayout:
@@ -332,6 +335,7 @@ MyScreenManager:
                 name: 'Library'
                 lat: 65.061484
                 lon: 25.466539
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -380,6 +384,7 @@ MyScreenManager:
                 name: 'Fab_Lab'
                 lat: 65.058953
                 lon: 25.466985
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -416,6 +421,7 @@ MyScreenManager:
                 name: 'Faculty of ITEE'
                 lat: 65.057949
                 lon: 25.468455
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -473,6 +479,7 @@ MyScreenManager:
                 name: 'Zoological_Museum'
                 lat: 65.060597
                 lon: 25.466931
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -519,6 +526,7 @@ MyScreenManager:
                 name: 'Balance'
                 lat: 65.061035
                 lon: 25.468079
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -566,6 +574,7 @@ MyScreenManager:
                 name: 'Saalasti Hall'
                 lat: 65.056928
                 lon: 25.468709
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -611,6 +620,7 @@ MyScreenManager:
                 name: 'KTK112'
                 lat: 65.061765
                 lon: 25.469892
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -658,6 +668,7 @@ MyScreenManager:
                 name: 'Stories'
                 lat: 65.058493
                 lon: 25.466995
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -704,6 +715,7 @@ MyScreenManager:
                 name: 'L6'
                 lat: 65.059941
                 lon: 25.466303
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -748,6 +760,7 @@ MyScreenManager:
                 name: 'Aava'
                 lat:  65.060479
                 lon:  25.46656
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
@@ -793,6 +806,7 @@ MyScreenManager:
                 name: 'PSOAS'
                 lat: 65.05733
                 lon: 25.467344
+                source: 'info.png'
                 popup_size: dp(340), dp(280)
                 Bubble:
                     BoxLayout:
