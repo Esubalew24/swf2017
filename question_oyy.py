@@ -95,4 +95,5 @@ class QuestionAnswerOyy(BoxLayout):
         the_popup = ResultPopupOyy()
         the_popup.open()
 
+
     Window.clearcolor = (0, 0.5, 0.5, 0.5)

@@ -206,15 +206,15 @@ MyScreenManager:
                             text: "[b]Tellus Innovation Arena[/b]\\nTellus Innovation Arena is a brand new, inspiring open space for learning, collaboration and entrepreneurship at the Uni."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                
+                                color: 1,0,1,1
+                                pos: 250,100
                                 valign: 'middle'
                                 on_ref_press:
                                     import webbrowser
@@ -223,15 +223,15 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                
+                                color: 1,0,1,1
+                                pos: 250,15
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/tellusarena-fi/")
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_tellus'
                             
@@ -254,15 +254,15 @@ MyScreenManager:
                             text: "[b]Student Center[/b] \\nStudent Center provides comprehensive services for students starting with registration to the university and going  all the way to alumni services."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                         
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                text_size: self.size
-                                
+                                color: 1,0,1,1
+                                pos: 250,100
+                                align: "center"
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oulu.fi/university/node/34985")   
@@ -270,16 +270,16 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                text_size: self.size
-                                
+                                color: 1,0,1,1
+                                pos: 250,15
+                                align: "center"
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/yliopisto/opiskelijakeskus")
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_student_center'
             
@@ -302,15 +302,15 @@ MyScreenManager:
                             text: "[b]OYY[/b]\\nOYY supervises the interests of its members at the University, in the City of Oulu and at the national level."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                text_size: self.size
-                                halign:'right'
+                                color: 1,0,1,1
+                                pos: 250,100
+                                align:'center'
                                 on_ref_press:
                                     import webbrowser
                                     webbrowser.open("http://www.oyy.fi/en/")   
@@ -318,16 +318,16 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                text_size: self.size
-                                halign:'right'
+                                color: 1,0,1,1
+                                pos: 250, 15
+                                align:'center'
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oyy.fi/")
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_oyy'   
             
@@ -349,14 +349,14 @@ MyScreenManager:
                             text: "[b]Library[/b] \\nOulu University Library is a scientific library, the task of which is to provide library and information services for the researchers, teachers and students of the University of Oulu."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -365,8 +365,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -374,7 +374,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             
                             font_size: 30
                             on_release: app.root.current = 'question_library'
@@ -398,14 +398,14 @@ MyScreenManager:
                             text: "[b]Fab_Lab[/b]\\nFab Lab Oulu is a small digital manufacturing working area (fabrication laboratory)  that complies with open innovation concept developed by MIT in the United States."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -413,7 +413,7 @@ MyScreenManager:
                             
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_fablab'                
             
@@ -435,13 +435,13 @@ MyScreenManager:
                             text: "[b]Faculty of ITEE[/b]\\nThe mission of the ITEE faculty is to  advance internationally top-level  research on information technology and education based on it and  generate new knowledge of information technology and apply it to the needs of the society, people and industries."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
+                                color: 1,0,1,1
                                 pos: 200, 200
                                 align: "center"
                                 on_ref_press:
@@ -451,18 +451,18 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
                                     webbrowser.open("http://www.oulu.fi/tst/node/24248")
                                     
                             Label:
-                                text: '[ref=] More Info In Finnish [/ref]'
+                                text: '[ref=] More Info - Video [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -470,7 +470,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_datagarage'                    
             
@@ -493,14 +493,14 @@ MyScreenManager:
                             text: "[b]Zoological Museum & Oulu Business School [/b]\\nFab Lab Oulu is a small digital manufacturing working area (fabrication laboratory)  that complies with open innovation concept developed by MIT in the United States."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -509,8 +509,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -518,7 +518,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_zoological_museum'            
             
@@ -540,14 +540,14 @@ MyScreenManager:
                             text: "[b]Faculty of Humanities[/b]\\nThe Faculty of Humanities provided teaching and research in practically all the academic disciplines concerned with achievements in the humanities: history, language and linguistics, cultural studies and literature."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -556,8 +556,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -565,7 +565,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_balance'
             
@@ -587,14 +587,14 @@ MyScreenManager:
                             text: "[b]Saalasti Hall[/b]is the place which graduation ceremonies are held every month"
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -603,8 +603,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -612,7 +612,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_saalasti_hall'
             
@@ -633,15 +633,15 @@ MyScreenManager:
                             text: "[b]The Faculty of Education[/b]\\nis multidisciplinary expert organisation for training, research and development in the field of education and teaching."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -650,8 +650,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -660,7 +660,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_faculity_of_education'    
                         
@@ -681,15 +681,15 @@ MyScreenManager:
                             text: "[b]The Faculty of Technology[/b]\\noperates in the field of Mechanical Engineering Environmental Engineering and Industrial Engineering and Management."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -698,8 +698,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -707,7 +707,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_stories'
                         
@@ -728,14 +728,14 @@ MyScreenManager:
                             text: "[b]The Faculty of Science[/b]\\nis the second biggest educational unit in Sciences in Finland"
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -744,8 +744,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -753,7 +753,7 @@ MyScreenManager:
                             
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_faculity_of_science'
             MapMarkerPopup:
@@ -773,14 +773,14 @@ MyScreenManager:
                             text: "[b] Restaurant [/b]\\nStudent prices for the meals are: basic student lunch EUR 2.60 soup lunch EUR 2.25 grill portion EUR 4.95 and the special lunch EUR 4.85"
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -789,8 +789,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -798,7 +798,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_aava'
             
@@ -820,14 +820,14 @@ MyScreenManager:
                             text: "[b]PSOAS[/b]\\nThe main duty of PSOAS is to offer inexpensive living quarters to the areas."
                             markup: True
                             text_size: self.size
-                            halign: 'left'
+                            halign: 'center'
                             valign:'middle'
                             
                             Label:
                                 text: '[ref=] More Info in English [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 100
+                                color: 1,0,1,1
+                                pos: 250, 100
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser
@@ -836,8 +836,8 @@ MyScreenManager:
                             Label:
                                 text: '[ref=] More Info In Finnish [/ref]'
                                 markup: True
-                                color: 0,0,1,1
-                                pos: 200, 15
+                                color: 1,0,1,1
+                                pos: 250, 15
                                 align: "center"
                                 on_ref_press:
                                     import webbrowser                                
@@ -845,7 +845,7 @@ MyScreenManager:
                         
                         Button:
                             text: 'Play'
-                            size_hint: 0.4, 0.25
+                            size_hint: 0.5, 0.15
                             font_size: 30
                             on_release: app.root.current = 'question_psoas'
 
